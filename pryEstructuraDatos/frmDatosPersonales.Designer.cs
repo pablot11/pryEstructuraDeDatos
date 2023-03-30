@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosPersonales));
             this.mrcDatosPersonales = new System.Windows.Forms.GroupBox();
-            this.picFoto = new System.Windows.Forms.PictureBox();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblIngreseDni = new System.Windows.Forms.Label();
-            this.lblMateriaCursando = new System.Windows.Forms.Label();
-            this.lblMiNombre = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblMateria = new System.Windows.Forms.Label();
+            this.lblCarreraCursando = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
-            this.lblCarreraa = new System.Windows.Forms.Label();
+            this.lblMateria = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblMiNombre = new System.Windows.Forms.Label();
+            this.lblMateriaCursando = new System.Windows.Forms.Label();
+            this.lblIngreseDni = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.mrcDatosPersonales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcDatosPersonales
             // 
-            this.mrcDatosPersonales.Controls.Add(this.lblCarreraa);
+            this.mrcDatosPersonales.Controls.Add(this.lblCarreraCursando);
             this.mrcDatosPersonales.Controls.Add(this.lblCarrera);
             this.mrcDatosPersonales.Controls.Add(this.lblMateria);
             this.mrcDatosPersonales.Controls.Add(this.lblNombre);
@@ -61,69 +61,14 @@
             this.mrcDatosPersonales.TabStop = false;
             this.mrcDatosPersonales.Text = "Mis Datos";
             // 
-            // picFoto
+            // lblCarreraCursando
             // 
-            this.picFoto.Image = ((System.Drawing.Image)(resources.GetObject("picFoto.Image")));
-            this.picFoto.Location = new System.Drawing.Point(6, 19);
-            this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(132, 116);
-            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFoto.TabIndex = 0;
-            this.picFoto.TabStop = false;
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(198, 19);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(55, 13);
-            this.lblDni.TabIndex = 1;
-            this.lblDni.Text = "44753664";
-            // 
-            // lblIngreseDni
-            // 
-            this.lblIngreseDni.AutoSize = true;
-            this.lblIngreseDni.Location = new System.Drawing.Point(144, 19);
-            this.lblIngreseDni.Name = "lblIngreseDni";
-            this.lblIngreseDni.Size = new System.Drawing.Size(29, 13);
-            this.lblIngreseDni.TabIndex = 2;
-            this.lblIngreseDni.Text = "DNI:";
-            // 
-            // lblMateriaCursando
-            // 
-            this.lblMateriaCursando.AutoSize = true;
-            this.lblMateriaCursando.Location = new System.Drawing.Point(144, 73);
-            this.lblMateriaCursando.Name = "lblMateriaCursando";
-            this.lblMateriaCursando.Size = new System.Drawing.Size(45, 13);
-            this.lblMateriaCursando.TabIndex = 3;
-            this.lblMateriaCursando.Text = "Materia:";
-            // 
-            // lblMiNombre
-            // 
-            this.lblMiNombre.AutoSize = true;
-            this.lblMiNombre.Location = new System.Drawing.Point(144, 46);
-            this.lblMiNombre.Name = "lblMiNombre";
-            this.lblMiNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblMiNombre.TabIndex = 4;
-            this.lblMiNombre.Text = "Nombre:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(198, 47);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(125, 13);
-            this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Pablo Martin Torres Nara";
-            // 
-            // lblMateria
-            // 
-            this.lblMateria.AutoSize = true;
-            this.lblMateria.Location = new System.Drawing.Point(198, 73);
-            this.lblMateria.Name = "lblMateria";
-            this.lblMateria.Size = new System.Drawing.Size(101, 13);
-            this.lblMateria.TabIndex = 6;
-            this.lblMateria.Text = "Estructura de Datos";
+            this.lblCarreraCursando.AutoSize = true;
+            this.lblCarreraCursando.Location = new System.Drawing.Point(198, 100);
+            this.lblCarreraCursando.Name = "lblCarreraCursando";
+            this.lblCarreraCursando.Size = new System.Drawing.Size(104, 13);
+            this.lblCarreraCursando.TabIndex = 8;
+            this.lblCarreraCursando.Text = "Analista de Sistemas";
             // 
             // lblCarrera
             // 
@@ -134,14 +79,69 @@
             this.lblCarrera.TabIndex = 7;
             this.lblCarrera.Text = "Carrera:";
             // 
-            // lblCarreraa
+            // lblMateria
             // 
-            this.lblCarreraa.AutoSize = true;
-            this.lblCarreraa.Location = new System.Drawing.Point(198, 100);
-            this.lblCarreraa.Name = "lblCarreraa";
-            this.lblCarreraa.Size = new System.Drawing.Size(104, 13);
-            this.lblCarreraa.TabIndex = 8;
-            this.lblCarreraa.Text = "Analista de Sistemas";
+            this.lblMateria.AutoSize = true;
+            this.lblMateria.Location = new System.Drawing.Point(198, 73);
+            this.lblMateria.Name = "lblMateria";
+            this.lblMateria.Size = new System.Drawing.Size(101, 13);
+            this.lblMateria.TabIndex = 6;
+            this.lblMateria.Text = "Estructura de Datos";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(198, 47);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(125, 13);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Pablo Martin Torres Nara";
+            // 
+            // lblMiNombre
+            // 
+            this.lblMiNombre.AutoSize = true;
+            this.lblMiNombre.Location = new System.Drawing.Point(144, 46);
+            this.lblMiNombre.Name = "lblMiNombre";
+            this.lblMiNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblMiNombre.TabIndex = 4;
+            this.lblMiNombre.Text = "Nombre:";
+            // 
+            // lblMateriaCursando
+            // 
+            this.lblMateriaCursando.AutoSize = true;
+            this.lblMateriaCursando.Location = new System.Drawing.Point(144, 73);
+            this.lblMateriaCursando.Name = "lblMateriaCursando";
+            this.lblMateriaCursando.Size = new System.Drawing.Size(45, 13);
+            this.lblMateriaCursando.TabIndex = 3;
+            this.lblMateriaCursando.Text = "Materia:";
+            // 
+            // lblIngreseDni
+            // 
+            this.lblIngreseDni.AutoSize = true;
+            this.lblIngreseDni.Location = new System.Drawing.Point(144, 19);
+            this.lblIngreseDni.Name = "lblIngreseDni";
+            this.lblIngreseDni.Size = new System.Drawing.Size(29, 13);
+            this.lblIngreseDni.TabIndex = 2;
+            this.lblIngreseDni.Text = "DNI:";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(198, 19);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(55, 13);
+            this.lblDni.TabIndex = 1;
+            this.lblDni.Text = "44753664";
+            // 
+            // picFoto
+            // 
+            this.picFoto.Image = ((System.Drawing.Image)(resources.GetObject("picFoto.Image")));
+            this.picFoto.Location = new System.Drawing.Point(6, 19);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(132, 116);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 0;
+            this.picFoto.TabStop = false;
             // 
             // frmDatosPersonales
             // 
@@ -162,7 +162,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox mrcDatosPersonales;
-        private System.Windows.Forms.Label lblCarreraa;
+        private System.Windows.Forms.Label lblCarreraCursando;
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.Label lblNombre;
