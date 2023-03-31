@@ -22,3 +22,15 @@ C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pr
 C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.CoreCompileInputs.cache
 C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
 C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb
+E:\Escritorio\a\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.exe.config
+E:\Escritorio\a\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.exe
+E:\Escritorio\a\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.pdb
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.AssemblyReference.cache
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.SuggestedBindingRedirects.cache
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmDatosPersonales.resources
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmPrincipal.resources
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.Properties.Resources.resources
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.GenerateResource.cache
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.CoreCompileInputs.cache
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
+E:\Escritorio\a\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb
