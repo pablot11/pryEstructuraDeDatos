@@ -28,5 +28,11 @@ namespace pryEstructuraDatos
             frmDatosPersonales objVentanaDatosPersonles = new frmDatosPersonales();
             objVentanaDatosPersonles.Show();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola ObjCola = new frmCola();
+            ObjCola.ShowDialog();
+        }
     }
 }

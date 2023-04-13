@@ -47,3 +47,16 @@ C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\p
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.exe.config
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.exe
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.pdb
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.AssemblyReference.cache
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmCola.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmDatosPersonales.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmPrincipal.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.Properties.Resources.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.GenerateResource.cache
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatosss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb

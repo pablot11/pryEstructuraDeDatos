@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.noLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosProgramadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.noLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
@@ -64,6 +64,20 @@
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
+            // datosProgramadorToolStripMenuItem
+            // 
+            this.datosProgramadorToolStripMenuItem.Name = "datosProgramadorToolStripMenuItem";
+            this.datosProgramadorToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.datosProgramadorToolStripMenuItem.Text = "Datos Programador";
+            this.datosProgramadorToolStripMenuItem.Click += new System.EventHandler(this.datosProgramadorToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // linealesToolStripMenuItem
             // 
             this.linealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -73,29 +87,6 @@
             this.linealesToolStripMenuItem.Name = "linealesToolStripMenuItem";
             this.linealesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.linealesToolStripMenuItem.Text = "Lineales";
-            // 
-            // noLinealesToolStripMenuItem
-            // 
-            this.noLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.simpleToolStripMenuItem,
-            this.dobleToolStripMenuItem});
-            this.noLinealesToolStripMenuItem.Name = "noLinealesToolStripMenuItem";
-            this.noLinealesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.noLinealesToolStripMenuItem.Text = "No Lineales";
-            // 
-            // datosProgramadorToolStripMenuItem
-            // 
-            this.datosProgramadorToolStripMenuItem.Name = "datosProgramadorToolStripMenuItem";
-            this.datosProgramadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.datosProgramadorToolStripMenuItem.Text = "Datos Programador";
-            this.datosProgramadorToolStripMenuItem.Click += new System.EventHandler(this.datosProgramadorToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
@@ -108,6 +99,7 @@
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
             this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colaToolStripMenuItem.Text = "Cola";
+            this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // listaToolStripMenuItem
             // 
@@ -115,16 +107,25 @@
             this.listaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaToolStripMenuItem.Text = "Lista";
             // 
+            // noLinealesToolStripMenuItem
+            // 
+            this.noLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.simpleToolStripMenuItem,
+            this.dobleToolStripMenuItem});
+            this.noLinealesToolStripMenuItem.Name = "noLinealesToolStripMenuItem";
+            this.noLinealesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.noLinealesToolStripMenuItem.Text = "No Lineales";
+            // 
             // simpleToolStripMenuItem
             // 
             this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.simpleToolStripMenuItem.Text = "Simple";
             // 
             // dobleToolStripMenuItem
             // 
             this.dobleToolStripMenuItem.Name = "dobleToolStripMenuItem";
-            this.dobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dobleToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.dobleToolStripMenuItem.Text = "Doble";
             // 
             // frmPrincipal

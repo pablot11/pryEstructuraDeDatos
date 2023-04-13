@@ -31,5 +31,32 @@ namespace pryEstructuraDatos
             txtNombre.Text = "";
             txtTramite.Text = "";
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (FilaDePersonas.Primero != null)
+            {
+
+                lblCodigo.Text = FilaDePersonas.Primero.Codigo.ToString();
+                lblNombre.Text = FilaDePersonas.Primero.Nombre;
+                lblTramite.Text = FilaDePersonas.Primero.Tramite;
+                FilaDePersonas.Eliminar();
+                FilaDePersonas.Recorrer(grlMostrar);
+                FilaDePersonas.Recorrer(lstMostrar);
+                
+
+            }
+            else
+            {
+                
+                
+                    lblCodigo.Text = "";
+                    lblNombre.Text = "";
+                    lblTramite.Text = "";
+                
+            }
+
+
+        }
     }
 }
