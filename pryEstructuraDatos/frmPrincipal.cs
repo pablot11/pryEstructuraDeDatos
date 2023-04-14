@@ -34,5 +34,11 @@ namespace pryEstructuraDatos
             frmCola ObjCola = new frmCola();
             ObjCola.ShowDialog();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila objVentana = new frmPila();
+            objVentana.ShowDialog();    
+        }
     }
 }
