@@ -268,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 361);
+            this.ClientSize = new System.Drawing.Size(662, 448);
             this.Controls.Add(this.mrcMostrar);
             this.Controls.Add(this.picCola);
             this.Controls.Add(this.btnEliminar);

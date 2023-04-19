@@ -74,3 +74,5 @@ C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatoss\pryEstructuraDatos\obj\Debug
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatoss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.csproj.CoreCompileInputs.cache
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatoss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatoss\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb
+C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmCola.resources
+C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmPila.resources
