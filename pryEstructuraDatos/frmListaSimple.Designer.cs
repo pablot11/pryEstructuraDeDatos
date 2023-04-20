@@ -38,6 +38,7 @@
             this.picCola = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.lstCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigoEliminar = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.mrcElementoNuevo = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lstCodigo = new System.Windows.Forms.ComboBox();
             this.mrcMostrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grlMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).BeginInit();
@@ -122,6 +122,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // mrcElementoEliminado
             // 
@@ -134,6 +135,15 @@
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Elimnado:";
             this.mrcElementoEliminado.Enter += new System.EventHandler(this.mrcElementoEliminado_Enter);
+            // 
+            // lstCodigo
+            // 
+            this.lstCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstCodigo.FormattingEnabled = true;
+            this.lstCodigo.Location = new System.Drawing.Point(54, 95);
+            this.lstCodigo.Name = "lstCodigo";
+            this.lstCodigo.Size = new System.Drawing.Size(121, 21);
+            this.lstCodigo.TabIndex = 2;
             // 
             // lblCodigoEliminar
             // 
@@ -152,6 +162,7 @@
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // mrcElementoNuevo
             // 
@@ -215,15 +226,6 @@
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Código:";
-            // 
-            // lstCodigo
-            // 
-            this.lstCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(54, 95);
-            this.lstCodigo.Name = "lstCodigo";
-            this.lstCodigo.Size = new System.Drawing.Size(121, 21);
-            this.lstCodigo.TabIndex = 2;
             // 
             // frmListaSimple
             // 

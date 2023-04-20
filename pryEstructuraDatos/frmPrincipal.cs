@@ -40,5 +40,16 @@ namespace pryEstructuraDatos
             frmPila objVentana = new frmPila();
             objVentana.ShowDialog();    
         }
+
+        private void listaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListaSimple objVentana = new frmListaSimple();
+                objVentana.ShowDialog();
+        }
     }
 }
