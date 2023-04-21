@@ -27,27 +27,13 @@ namespace pryEstructuraDatos
             objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
             objNodo.Tramite = txtTramite.Text;
             objListaDoble.Agregar(objNodo);
-            if (optAscendente.Checked == true || optDescendente.Checked == true)
-            {
-                if (optAscendente.Checked == true)
-                {
+       
+                
                     objListaDoble.Recorrer(grlMostrar);
                     objListaDoble.Recorrer(lstCodigo);
                     objListaDoble.Recorrer(lstMostrar);
 
-                }
-                else if (optDescendente.Checked == true)
-                {
-                    objListaDoble.RecorrerDes(grlMostrar);
-                    objListaDoble.RecorrerDes(lstCodigo);
-                    objListaDoble.RecorrerDes(lstMostrar);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Elegir si ascendete o descendente");
-                this.Close();
-            }
+              
 
 
         }
@@ -64,6 +50,20 @@ namespace pryEstructuraDatos
                 objListaDoble.Recorrer(lstMostrar);
 
             }
+        }
+
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            objListaDoble.Recorrer(grlMostrar);
+            objListaDoble.Recorrer(lstCodigo);
+            objListaDoble.Recorrer(lstMostrar);
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            objListaDoble.RecorrerDes(grlMostrar);
+            objListaDoble.RecorrerDes(lstCodigo);
+            objListaDoble.RecorrerDes(lstMostrar);
         }
     }
 }
