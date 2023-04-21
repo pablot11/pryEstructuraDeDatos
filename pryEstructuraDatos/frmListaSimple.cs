@@ -50,7 +50,7 @@ namespace pryEstructuraDatos
                 Lista.Recorrer(lstMostrar);
 
             }
- 
+            
             
 
 

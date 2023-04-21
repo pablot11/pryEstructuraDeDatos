@@ -54,7 +54,16 @@ namespace pryEstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (objListaDoble.Primero != null)
+            {
+                Int32 varCodigo = 0;
+                varCodigo = Convert.ToInt32(lstCodigo.Text);
+                objListaDoble.Eliminar(varCodigo);
+                objListaDoble.Recorrer(grlMostrar);
+                objListaDoble.Recorrer(lstCodigo);
+                objListaDoble.Recorrer(lstMostrar);
 
+            }
         }
     }
 }
