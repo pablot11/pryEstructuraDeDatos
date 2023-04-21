@@ -37,11 +37,11 @@
             this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dobleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.noLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.simpleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dobleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +114,20 @@
             this.listaToolStripMenuItem.Text = "Lista";
             this.listaToolStripMenuItem.Click += new System.EventHandler(this.listaToolStripMenuItem_Click);
             // 
+            // simpleToolStripMenuItem1
+            // 
+            this.simpleToolStripMenuItem1.Name = "simpleToolStripMenuItem1";
+            this.simpleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.simpleToolStripMenuItem1.Text = "Simple";
+            this.simpleToolStripMenuItem1.Click += new System.EventHandler(this.simpleToolStripMenuItem1_Click);
+            // 
+            // dobleToolStripMenuItem1
+            // 
+            this.dobleToolStripMenuItem1.Name = "dobleToolStripMenuItem1";
+            this.dobleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.dobleToolStripMenuItem1.Text = "Doble";
+            this.dobleToolStripMenuItem1.Click += new System.EventHandler(this.dobleToolStripMenuItem1_Click);
+            // 
             // noLinealesToolStripMenuItem
             // 
             this.noLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -134,19 +148,6 @@
             this.dobleToolStripMenuItem.Name = "dobleToolStripMenuItem";
             this.dobleToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.dobleToolStripMenuItem.Text = "Doble";
-            // 
-            // simpleToolStripMenuItem1
-            // 
-            this.simpleToolStripMenuItem1.Name = "simpleToolStripMenuItem1";
-            this.simpleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.simpleToolStripMenuItem1.Text = "Simple";
-            this.simpleToolStripMenuItem1.Click += new System.EventHandler(this.simpleToolStripMenuItem1_Click);
-            // 
-            // dobleToolStripMenuItem1
-            // 
-            this.dobleToolStripMenuItem1.Name = "dobleToolStripMenuItem1";
-            this.dobleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.dobleToolStripMenuItem1.Text = "Doble";
             // 
             // frmPrincipal
             // 

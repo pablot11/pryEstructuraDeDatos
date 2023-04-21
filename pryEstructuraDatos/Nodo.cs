@@ -12,6 +12,7 @@ namespace pryEstructuraDatos
         private string nom = "";
         private string tra = "";
         private Nodo sig;
+        private Nodo ant;
 
 
         public Int32 Codigo 
@@ -36,7 +37,12 @@ namespace pryEstructuraDatos
             set { sig = value; }
         }
 
-
+        public Nodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
+            
+        }
 
     }
 }

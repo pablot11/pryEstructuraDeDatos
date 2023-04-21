@@ -51,5 +51,11 @@ namespace pryEstructuraDatos
             frmListaSimple objVentana = new frmListaSimple();
                 objVentana.ShowDialog();
         }
+
+        private void dobleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListaDoble objListaDoble = new frmListaDoble();
+            objListaDoble.ShowDialog();
+        }
     }
 }
