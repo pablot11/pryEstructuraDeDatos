@@ -77,16 +77,22 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(67, 60);
+            this.txtNombre.MaxLength = 25;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(67, 95);
+            this.txtTramite.MaxLength = 15;
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
-            this.txtTramite.TabIndex = 5;
+            this.txtTramite.TabIndex = 3;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
+            this.txtTramite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTramite_KeyPress);
             // 
             // lblTramite
             // 
@@ -109,9 +115,12 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(67, 25);
+            this.txtCodigo.MaxLength = 6;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 2;
+            this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // lblCodigo
             // 
@@ -124,20 +133,21 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(191, 144);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(181, 23);
-            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(398, 144);
+            this.btnEliminar.Location = new System.Drawing.Point(378, 144);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(181, 23);
-            this.btnEliminar.TabIndex = 1;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -150,7 +160,7 @@
             this.mrcElementoEliminado.Controls.Add(this.lblNombreEliminar);
             this.mrcElementoEliminado.Controls.Add(this.txtCodigoEliminar);
             this.mrcElementoEliminado.Controls.Add(this.lblCodigoEliminar);
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(398, 12);
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(378, 12);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
             this.mrcElementoEliminado.Size = new System.Drawing.Size(181, 126);
             this.mrcElementoEliminado.TabIndex = 2;
@@ -159,6 +169,7 @@
             // 
             // txtNombreEliminar
             // 
+            this.txtNombreEliminar.Enabled = false;
             this.txtNombreEliminar.Location = new System.Drawing.Point(67, 60);
             this.txtNombreEliminar.Name = "txtNombreEliminar";
             this.txtNombreEliminar.Size = new System.Drawing.Size(100, 20);
@@ -166,6 +177,7 @@
             // 
             // txtTramiteEliminar
             // 
+            this.txtTramiteEliminar.Enabled = false;
             this.txtTramiteEliminar.Location = new System.Drawing.Point(67, 95);
             this.txtTramiteEliminar.Name = "txtTramiteEliminar";
             this.txtTramiteEliminar.Size = new System.Drawing.Size(100, 20);
@@ -174,7 +186,7 @@
             // lblTramiteEliminar
             // 
             this.lblTramiteEliminar.AutoSize = true;
-            this.lblTramiteEliminar.Location = new System.Drawing.Point(6, 95);
+            this.lblTramiteEliminar.Location = new System.Drawing.Point(4, 95);
             this.lblTramiteEliminar.Name = "lblTramiteEliminar";
             this.lblTramiteEliminar.Size = new System.Drawing.Size(45, 13);
             this.lblTramiteEliminar.TabIndex = 4;
@@ -191,7 +203,9 @@
             // 
             // txtCodigoEliminar
             // 
+            this.txtCodigoEliminar.Enabled = false;
             this.txtCodigoEliminar.Location = new System.Drawing.Point(67, 25);
+            this.txtCodigoEliminar.MaxLength = 6;
             this.txtCodigoEliminar.Name = "txtCodigoEliminar";
             this.txtCodigoEliminar.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoEliminar.TabIndex = 2;
@@ -207,6 +221,8 @@
             // 
             // grlMostrar
             // 
+            this.grlMostrar.AllowUserToAddRows = false;
+            this.grlMostrar.AllowUserToDeleteRows = false;
             this.grlMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grlMostrar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columna1,
@@ -214,7 +230,8 @@
             this.Columna3});
             this.grlMostrar.Location = new System.Drawing.Point(185, 19);
             this.grlMostrar.Name = "grlMostrar";
-            this.grlMostrar.Size = new System.Drawing.Size(385, 160);
+            this.grlMostrar.ReadOnly = true;
+            this.grlMostrar.Size = new System.Drawing.Size(362, 160);
             this.grlMostrar.TabIndex = 3;
             // 
             // columna1
@@ -238,9 +255,9 @@
             // picCola
             // 
             this.picCola.Image = ((System.Drawing.Image)(resources.GetObject("picCola.Image")));
-            this.picCola.Location = new System.Drawing.Point(12, 12);
+            this.picCola.Location = new System.Drawing.Point(6, 12);
             this.picCola.Name = "picCola";
-            this.picCola.Size = new System.Drawing.Size(173, 155);
+            this.picCola.Size = new System.Drawing.Size(179, 155);
             this.picCola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCola.TabIndex = 4;
             this.picCola.TabStop = false;
@@ -259,7 +276,7 @@
             this.mrcMostrar.Controls.Add(this.grlMostrar);
             this.mrcMostrar.Location = new System.Drawing.Point(6, 173);
             this.mrcMostrar.Name = "mrcMostrar";
-            this.mrcMostrar.Size = new System.Drawing.Size(573, 183);
+            this.mrcMostrar.Size = new System.Drawing.Size(553, 183);
             this.mrcMostrar.TabIndex = 6;
             this.mrcMostrar.TabStop = false;
             this.mrcMostrar.Text = "Listado en una Lista y una Grilla";
@@ -268,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 448);
+            this.ClientSize = new System.Drawing.Size(566, 360);
             this.Controls.Add(this.mrcMostrar);
             this.Controls.Add(this.picCola);
             this.Controls.Add(this.btnEliminar);
@@ -276,8 +293,9 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.mrcElementoNuevo);
             this.Name = "frmCola";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Dinámica Lineal - Cola";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmCola_Load);
             this.mrcElementoNuevo.ResumeLayout(false);
             this.mrcElementoNuevo.PerformLayout();
             this.mrcElementoEliminado.ResumeLayout(false);

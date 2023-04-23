@@ -106,3 +106,5 @@ C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.exe.config
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.exe
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.pdb
+C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaDoble.resources
+C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaSimple.resources

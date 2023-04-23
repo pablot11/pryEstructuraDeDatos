@@ -64,7 +64,7 @@
             // lblCarreraCursando
             // 
             this.lblCarreraCursando.AutoSize = true;
-            this.lblCarreraCursando.Location = new System.Drawing.Point(198, 100);
+            this.lblCarreraCursando.Location = new System.Drawing.Point(195, 97);
             this.lblCarreraCursando.Name = "lblCarreraCursando";
             this.lblCarreraCursando.Size = new System.Drawing.Size(104, 13);
             this.lblCarreraCursando.TabIndex = 8;
@@ -73,7 +73,7 @@
             // lblCarrera
             // 
             this.lblCarrera.AutoSize = true;
-            this.lblCarrera.Location = new System.Drawing.Point(144, 100);
+            this.lblCarrera.Location = new System.Drawing.Point(144, 97);
             this.lblCarrera.Name = "lblCarrera";
             this.lblCarrera.Size = new System.Drawing.Size(44, 13);
             this.lblCarrera.TabIndex = 7;
@@ -82,7 +82,7 @@
             // lblMateria
             // 
             this.lblMateria.AutoSize = true;
-            this.lblMateria.Location = new System.Drawing.Point(198, 73);
+            this.lblMateria.Location = new System.Drawing.Point(195, 71);
             this.lblMateria.Name = "lblMateria";
             this.lblMateria.Size = new System.Drawing.Size(101, 13);
             this.lblMateria.TabIndex = 6;
@@ -91,7 +91,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(198, 47);
+            this.lblNombre.Location = new System.Drawing.Point(195, 45);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(125, 13);
             this.lblNombre.TabIndex = 5;
@@ -100,7 +100,7 @@
             // lblMiNombre
             // 
             this.lblMiNombre.AutoSize = true;
-            this.lblMiNombre.Location = new System.Drawing.Point(144, 46);
+            this.lblMiNombre.Location = new System.Drawing.Point(144, 45);
             this.lblMiNombre.Name = "lblMiNombre";
             this.lblMiNombre.Size = new System.Drawing.Size(47, 13);
             this.lblMiNombre.TabIndex = 4;
@@ -109,7 +109,7 @@
             // lblMateriaCursando
             // 
             this.lblMateriaCursando.AutoSize = true;
-            this.lblMateriaCursando.Location = new System.Drawing.Point(144, 73);
+            this.lblMateriaCursando.Location = new System.Drawing.Point(144, 71);
             this.lblMateriaCursando.Name = "lblMateriaCursando";
             this.lblMateriaCursando.Size = new System.Drawing.Size(45, 13);
             this.lblMateriaCursando.TabIndex = 3;
@@ -127,7 +127,7 @@
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(198, 19);
+            this.lblDni.Location = new System.Drawing.Point(195, 19);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(55, 13);
             this.lblDni.TabIndex = 1;
@@ -151,6 +151,7 @@
             this.Controls.Add(this.mrcDatosPersonales);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDatosPersonales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos";
             this.mrcDatosPersonales.ResumeLayout(false);
             this.mrcDatosPersonales.PerformLayout();

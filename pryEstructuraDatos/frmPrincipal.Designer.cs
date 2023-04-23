@@ -93,14 +93,14 @@
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.pilaToolStripMenuItem.Text = "Pila";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.colaToolStripMenuItem.Text = "Cola";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
@@ -110,21 +110,21 @@
             this.simpleToolStripMenuItem1,
             this.dobleToolStripMenuItem1});
             this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            this.listaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.listaToolStripMenuItem.Text = "Lista";
             this.listaToolStripMenuItem.Click += new System.EventHandler(this.listaToolStripMenuItem_Click);
             // 
             // simpleToolStripMenuItem1
             // 
             this.simpleToolStripMenuItem1.Name = "simpleToolStripMenuItem1";
-            this.simpleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.simpleToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.simpleToolStripMenuItem1.Text = "Simple";
             this.simpleToolStripMenuItem1.Click += new System.EventHandler(this.simpleToolStripMenuItem1_Click);
             // 
             // dobleToolStripMenuItem1
             // 
             this.dobleToolStripMenuItem1.Name = "dobleToolStripMenuItem1";
-            this.dobleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.dobleToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.dobleToolStripMenuItem1.Text = "Doble";
             this.dobleToolStripMenuItem1.Click += new System.EventHandler(this.dobleToolStripMenuItem1_Click);
             // 
@@ -158,6 +158,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msPrincipal;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura  de Datos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.msPrincipal.ResumeLayout(false);
