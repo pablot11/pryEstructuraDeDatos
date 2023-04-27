@@ -163,6 +163,7 @@ namespace pryEstructuraDatos
         //Eliminar
         public void Eliminar(Int32 Codigo)
         {
+            //Primer if si el dato que borro es el unico de la lista
             if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
 
@@ -176,23 +177,39 @@ namespace pryEstructuraDatos
             {
                 if (Primero.Codigo == Codigo)
                 {
-                    Ultimo = Ultimo.Anterior;
-                    Ultimo.Siguiente = null;
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
                 }
                 else
                 {
-                    Nodo aux = Primero;
-                    Nodo ant = Primero;
-                    while (aux.Codigo < Codigo)
+                    if (Ultimo.Codigo == Codigo)
                     {
-                        ant = aux;
-                        aux = aux.Siguiente;
-
-
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
                     }
-                    ant.Siguiente = aux.Siguiente;
-                    aux = aux.Siguiente;
-                    aux.Anterior = ant;
+                    else
+                    {
+                        Nodo aux = Primero;
+                        Nodo ant = Primero;
+                        while (aux.Codigo != Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+
+
+                        }
+                        
+                        aux = aux.Siguiente;
+                        ant.Siguiente = aux;
+                        aux.Anterior = ant;
+
+
+                        // Diferente forma
+                        //ant.Siguiente = aux.Siguiente;
+                        //aux = aux.Siguiente;
+                        //aux.Anterior = ant;
+                    }
+
 
 
                 }

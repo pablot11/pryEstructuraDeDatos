@@ -68,10 +68,6 @@ namespace pryEstructuraDatos
             objListaDoble.Recorrer(lstMostrar);
             LimpiarControles();
             txtCodigo.Focus();
-
-              
-
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

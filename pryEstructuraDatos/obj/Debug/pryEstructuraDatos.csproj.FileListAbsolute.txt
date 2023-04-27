@@ -108,3 +108,6 @@ C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\bin\Debug\
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\bin\Debug\pryEstructuraDatos.pdb
 C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaDoble.resources
 C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaSimple.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaDoble.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaSimple.resources
+C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmPila.resources
