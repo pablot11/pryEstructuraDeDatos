@@ -111,3 +111,4 @@ C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pr
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaDoble.resources
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmListaSimple.resources
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmPila.resources
+C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmArbolBinario.resources
