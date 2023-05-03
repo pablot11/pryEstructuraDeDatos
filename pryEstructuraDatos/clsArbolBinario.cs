@@ -9,16 +9,12 @@ namespace pryEstructuraDatos
 {
     internal class clsArbolBinario
     {
-
         private Nodo Inicio;
-
-
         public Nodo Raiz
         {
             get {return Inicio;}
             set { Inicio = value; }
         }
-
         public void Agregar(Nodo Nvo)
         {
             Nvo.Izquierdo = null;
@@ -42,7 +38,6 @@ namespace pryEstructuraDatos
                     {
                         Aux = Aux.Derecho;
                     }
-
                 }
                 //Afuera del while
                 if (Nvo.Codigo != NodoPadre.Codigo)
@@ -53,23 +48,19 @@ namespace pryEstructuraDatos
                 {
                     NodoPadre.Derecho = Nvo;
                 }
-
-              
-
             }
-
         }
 
+        //-----------------------------Procedimientos Recorrer InOrdenAsc-----------------------------------//
+        //-------------------------------------------------------------------------------------------------//
 
+        //----------------------------InOrdenAsc ListBox-----------------------------------//
         public void Recorrer(ListBox Lista)
         {
-
             Lista.Items.Clear();
             InOrdenAsc(Lista, Raiz);
-
-
         }
-        public void InOrdenAsc(ListBox Lst, Nodo R)
+        public void InOrdenAsc(ListBox LstBox, Nodo R)
         {
             // Lo mismo pero mas extenso:
             //if (R.Izquierdo != null)
@@ -83,30 +74,232 @@ namespace pryEstructuraDatos
             //}
 
             //Forma mas eficiente de poner if:
-            if (R.Izquierdo != null) InOrdenAsc(Lst, R.Izquierdo); //I
-            Lst.Items.Add(R.Codigo); //R
-            if (R.Derecho != null) InOrdenAsc(Lst, R.Derecho); //D
+            if (R.Izquierdo != null) InOrdenAsc(LstBox, R.Izquierdo); //I
+            LstBox.Items.Add(R.Codigo + " " +  R.Nombre + " " + R.Tramite); //R
+            if (R.Derecho != null) InOrdenAsc(LstBox, R.Derecho); //D
 
             //Mostrar solo lo que quiero saber
             //if (R.Izquierdo != null) InOrdenAsc(Lst, R.Izquierdo); //I
             //if (R.Tramite == "Pagar")Lst.Items.Add(R.Codigo); //R
             //if (R.Derecho != null) InOrdenAsc(Lst, R.Derecho); //D
 
+        }//-----------------------------Fin OrdenAsc ListBox-------------------------------//
+
+        //----------------------------InOrdenAsc Grilla-----------------------------------//
+        public void Recorrer(DataGridView dgvMostrar)
+        {
+            dgvMostrar.Rows.Clear();
+            InOrdenAsc(dgvMostrar, Raiz);
         }
         public void InOrdenAsc(DataGridView dgvMostrar, Nodo R)
         {
             //Forma mas eficiente de poner if:
             if (R.Izquierdo != null) InOrdenAsc(dgvMostrar, R.Izquierdo); //I
-            dgvMostrar.Rows.Add(R.Codigo); //R
+            dgvMostrar.Rows.Add(R.Codigo, R.Nombre, R.Tramite); //R
             if (R.Derecho != null) InOrdenAsc(dgvMostrar, R.Derecho); //D
 
-        }
-        public void InOrdenAsc(ComboBox listadesplegable, Nodo R)
+        }//----------------------------Fin InOrdenAsc Grilla-----------------------------//
+
+        //----------------------------InOrdenAsc Combo-----------------------------------//
+        public void Recorrer(ComboBox Combo)
         {
-
-
-
+            Combo.Items.Clear();
+            InOrdenAsc(Combo, Raiz);
         }
+
+        public void InOrdenAsc(ComboBox Combo, Nodo R)
+        {
+            if (R.Izquierdo != null) InOrdenAsc(Combo, R.Izquierdo); //I
+            Combo.Items.Add(R.Codigo); //R
+            if (R.Derecho != null) InOrdenAsc(Combo, R.Derecho); //D
+
+
+        }//----------------------------Fin InOrdenAsc Combo-----------------------------//
+
+        //--------------------------------InOrdenAsc TreeView---------------------------//
+
+        public void Recorrer(TreeView TreeView)
+        {
+            TreeView.Nodes.Clear();
+            InOrdenAsc(TreeView, Raiz);
+        }
+        public void InOrdenAsc(TreeView TreeView, Nodo R)
+        {
+            if (R.Derecho != null) InOrdenAsc(TreeView, R.Derecho);
+            TreeView.Nodes.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(TreeView, R.Izquierdo);
+        }//--------------------------------Fin InOrdenAsc TreeView----------------------//
+
+        //-----------------------------Procedimientos Recorrer InOrdenDes-----------------------------------//
+        //-------------------------------------------------------------------------------------------------//
+        //----------------------------InOrdenDes ListBox-----------------------------------//
+        public void RecorrerDes(ListBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenDes(Lista, Raiz);
+        }
+        public void InOrdenDes(ListBox Lista, Nodo R)
+        {
+            if (R.Derecho != null) InOrdenDes(Lista, R.Derecho);
+            Lista.Items.Add(R.Codigo + " " + R.Nombre + " " + R.Tramite);
+            if (R.Izquierdo != null) InOrdenDes(Lista, R.Izquierdo);
+
+        }//-----------------------------Fin InOrdenDes ListBox-----------------------------//
+
+        //----------------------------InOrdenDes Grilla-----------------------------------//
+        public void RecorrerDes(DataGridView dgvMostrar)
+        {
+            dgvMostrar.Rows.Clear();
+            InOrdenDes(dgvMostrar, Raiz);
+        }
+        public void InOrdenDes(DataGridView dgvMostrar, Nodo R)
+        {
+            //Forma mas eficiente de poner if:
+            if (R.Derecho != null) InOrdenDes(dgvMostrar, R.Derecho); //I
+            dgvMostrar.Rows.Add(R.Codigo, R.Nombre, R.Tramite); //R
+            if (R.Izquierdo!= null) InOrdenDes(dgvMostrar, R.Izquierdo); //D
+
+        }//----------------------------Fin InOrdenAsc Grilla-----------------------------//
+
+
+
+        //----------------------------InOrdenDes Grilla-----------------------------------//
+        public void RecorrerDes(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            InOrdenDes(Combo, Raiz);
+        }
+        public void InOrdenDes(ComboBox Combo, Nodo R)
+        {
+            //Forma mas eficiente de poner if:
+            if (R.Derecho != null) InOrdenDes(Combo, R.Derecho); //I
+            Combo.Items.Add(R.Codigo); //R
+            if (R.Izquierdo != null) InOrdenDes(Combo, R.Izquierdo); //D
+
+        }//----------------------------Fin InOrdenAsc Grilla-----------------------------//
+         //--------------------------------InOrdenDes TreeView---------------------------//
+
+        public void RecorrerDes(TreeView TreeView)
+        {
+            TreeView.Nodes.Clear();
+            InOrdenDes(TreeView, Raiz);
+        }
+        public void InOrdenDes(TreeView TreeView, Nodo R)
+        {
+            if (R.Derecho != null) InOrdenDes(TreeView, R.Derecho);
+            TreeView.Nodes.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenDes(TreeView, R.Izquierdo);
+        }//--------------------------------Fin InOrdenDes TreeView----------------------//
+
+        //-----------------------------Procedimientos Recorrer PreOrden-----------------------------------//
+        //-------------------------------------------------------------------------------------------------//
+        //----------------------------------ListBox PreOrden---------------------------------//
+        public void RecorrerPre(ListBox lstBox)
+        {
+            lstBox.Items.Clear();
+            PreOrden(lstBox, Raiz);
+        }
+        public void PreOrden(ListBox lstBox, Nodo R)
+        {
+            lstBox.Items.Add(R.Codigo + " " + R.Nombre + " " + R.Tramite);
+            if (R.Izquierdo != null) PreOrden(lstBox, R.Izquierdo);
+            if (R.Derecho != null) PreOrden(lstBox, R.Derecho);
+        }//-----------------------------------Fin ListBox PreOrden-----------------------------//
+
+        //----------------------------------DataGridView PreOrden---------------------------------//
+        public void RecorrerPre(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+        }
+        public void PreOrden(DataGridView Grilla, Nodo R)
+        {
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null) PreOrden(Grilla, R.Izquierdo);
+            if (R.Derecho != null) PreOrden(Grilla, R.Derecho);
+        }//-----------------------------------Fin DataGridView PreOrden-----------------------------//
+
+        //----------------------------------Combo PreOrden---------------------------------//
+        public void RecorrerPre(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            PreOrden(Combo, Raiz);
+        }
+        public void PreOrden(ComboBox Combo, Nodo R)
+        {
+            Combo.Items.Add(R.Codigo);
+            if (R.Izquierdo != null) PreOrden(Combo, R.Izquierdo);
+            if (R.Derecho != null) PreOrden(Combo, R.Derecho);
+        }//-----------------------------------Fin Combo PreOrden-----------------------------//
+
+        //--------------------------------PreOrden TreeView---------------------------//
+
+        public void RecorrerPre(TreeView TreeView)
+        {
+            TreeView.Nodes.Clear();
+            PreOrden(TreeView, Raiz);
+        }
+        public void PreOrden(TreeView TreeView, Nodo R)
+        {
+            TreeView.Nodes.Add(R.Codigo.ToString());
+            if (R.Derecho != null) PreOrden(TreeView, R.Derecho);
+            if (R.Izquierdo != null) PreOrden(TreeView, R.Izquierdo);
+        }//--------------------------------Fin PreOrden TreeView----------------------/
+
+        //-----------------------------Procedimientos Recorrer PostOrden-----------------------------------//
+        //-------------------------------------------------------------------------------------------------//
+        //----------------------------------ListBox PostOrden---------------------------------//
+        public void RecorrerPost(ListBox lstBox)
+        {
+            lstBox.Items.Clear();
+            PostOrden(lstBox, Raiz);
+        }
+        public void PostOrden(ListBox lstBox, Nodo R)
+        {
+            if (R.Izquierdo != null) PreOrden(lstBox, R.Izquierdo);
+            if (R.Derecho != null) PreOrden(lstBox, R.Derecho);
+            lstBox.Items.Add(R.Codigo + " " + R.Nombre + " " + R.Tramite);
+        }//-----------------------------------Fin ListBox PostOrden-----------------------------//
+
+        //----------------------------------DataGridView PostOrden---------------------------------//
+        public void RecorrerPost(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
+        public void PostOrden(DataGridView Grilla, Nodo R)
+        {
+            if (R.Izquierdo != null) PreOrden(Grilla, R.Izquierdo);
+            if (R.Derecho != null) PreOrden(Grilla, R.Derecho);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+        }//-----------------------------------Fin DataGridView PostOrden-----------------------------//
+
+        //----------------------------------Combo PostOrden---------------------------------//
+        public void RecorrerPost(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            PostOrden(Combo, Raiz);
+        }
+        public void PostOrden(ComboBox Combo, Nodo R)
+        {
+            if (R.Izquierdo != null) PostOrden(Combo, R.Izquierdo);
+            if (R.Derecho != null) PostOrden(Combo, R.Derecho);
+            Combo.Items.Add(R.Codigo);
+        }//-----------------------------------Fin Combo PostOrden-----------------------------//
+        //--------------------------------PostOrden TreeView---------------------------//
+
+        public void RecorrerPost(TreeView TreeView)
+        {
+            TreeView.Nodes.Clear();
+            PostOrden(TreeView, Raiz);
+        }
+        public void PostOrden(TreeView TreeView, Nodo R)
+        {
+            TreeView.Nodes.Add(R.Codigo.ToString());
+            if (R.Derecho != null) PostOrden(TreeView, R.Derecho);
+            if (R.Izquierdo != null) PostOrden(TreeView, R.Izquierdo);
+        }//--------------------------------Fin PostOrden TreeView----------------------/
+
 
 
     }

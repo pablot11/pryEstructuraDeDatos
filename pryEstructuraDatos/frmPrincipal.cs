@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -56,6 +57,12 @@ namespace pryEstructuraDatos
         {
             frmListaDoble objListaDoble = new frmListaDoble();
             objListaDoble.ShowDialog();
+        }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario obJArbolBinario = new frmArbolBinario();
+            obJArbolBinario.ShowDialog();
         }
     }
 }

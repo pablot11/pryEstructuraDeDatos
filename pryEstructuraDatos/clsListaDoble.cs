@@ -40,19 +40,14 @@ namespace pryEstructuraDatos
                     Nvo.Siguiente = Primero;
                     Primero.Anterior = Nvo;
                     Primero = Nvo;
-
-
                 }
                 else
                 {
                     if (Nvo.Codigo >= Ultimo.Codigo)
                     {
-
                         Ultimo.Siguiente = Nvo;
                         Nvo.Anterior = Ultimo;
                         Ultimo = Nvo;
-
-
                     }
                     else
                     {
@@ -62,21 +57,13 @@ namespace pryEstructuraDatos
                         {
                             Ant = Aux;
                             Ant = Aux.Siguiente;
-
-
-
-
                         }
                         Ant.Siguiente = Nvo;
                         Nvo.Siguiente = Aux;
                         Aux.Anterior = Nvo;
                         Nvo.Anterior = Ant;
-
-
                     }
-                   
-
-
+                
                 }
 
 

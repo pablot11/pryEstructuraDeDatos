@@ -40,8 +40,7 @@
             this.simpleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dobleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.noLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,23 +130,17 @@
             // noLinealesToolStripMenuItem
             // 
             this.noLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.simpleToolStripMenuItem,
-            this.dobleToolStripMenuItem});
+            this.arbolBinarioToolStripMenuItem});
             this.noLinealesToolStripMenuItem.Name = "noLinealesToolStripMenuItem";
             this.noLinealesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.noLinealesToolStripMenuItem.Text = "No Lineales";
             // 
-            // simpleToolStripMenuItem
+            // arbolBinarioToolStripMenuItem
             // 
-            this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.simpleToolStripMenuItem.Text = "Simple";
-            // 
-            // dobleToolStripMenuItem
-            // 
-            this.dobleToolStripMenuItem.Name = "dobleToolStripMenuItem";
-            this.dobleToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.dobleToolStripMenuItem.Text = "Doble";
+            this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario";
+            this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -179,10 +172,9 @@
         private System.Windows.Forms.ToolStripMenuItem pilaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem simpleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem simpleToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dobleToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem arbolBinarioToolStripMenuItem;
     }
 }
 
