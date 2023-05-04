@@ -30,7 +30,7 @@ namespace pryEstructuraDatos
                 while (Aux != null)
                 {
                     NodoPadre = Aux;
-                    if (Nvo.Codigo != Aux.Codigo)
+                    if (Nvo.Codigo <= Aux.Codigo)
                     {
                         Aux = Aux.Izquierdo;
                     }
@@ -40,7 +40,7 @@ namespace pryEstructuraDatos
                     }
                 }
                 //Afuera del while
-                if (Nvo.Codigo != NodoPadre.Codigo)
+                if (Nvo.Codigo <= NodoPadre.Codigo)
                 {
                     NodoPadre.Izquierdo = Nvo;
                 }
@@ -155,9 +155,9 @@ namespace pryEstructuraDatos
         public void InOrdenDes(DataGridView dgvMostrar, Nodo R)
         {
             //Forma mas eficiente de poner if:
-            if (R.Derecho != null) InOrdenDes(dgvMostrar, R.Derecho); //I
+            if (R.Derecho != null) InOrdenDes(dgvMostrar, R.Derecho); //D
             dgvMostrar.Rows.Add(R.Codigo, R.Nombre, R.Tramite); //R
-            if (R.Izquierdo!= null) InOrdenDes(dgvMostrar, R.Izquierdo); //D
+            if (R.Izquierdo!= null) InOrdenDes(dgvMostrar, R.Izquierdo); //I
 
         }//----------------------------Fin InOrdenAsc Grilla-----------------------------//
 
@@ -299,6 +299,59 @@ namespace pryEstructuraDatos
             if (R.Derecho != null) PostOrden(TreeView, R.Derecho);
             if (R.Izquierdo != null) PostOrden(TreeView, R.Izquierdo);
         }//--------------------------------Fin PostOrden TreeView----------------------/
+
+        private Nodo[] vector = new Nodo[100];
+        private Int32 i = 0;
+        public void Equilibrar()
+        {
+            i = 0;
+            CargarVectorInOrden(Raiz);
+            Raiz = null;
+            EquilibrarArbol(0, i - 1);
+
+        }
+        private void CargarVectorInOrden(Nodo NodoPadre)
+        {
+            if (NodoPadre.Izquierdo != null)
+            {
+                CargarVectorInOrden(NodoPadre.Izquierdo);
+            }
+            vector[i] = NodoPadre;
+            i++;
+            if (NodoPadre.Derecho != null)
+            {
+                CargarVectorInOrden(NodoPadre.Derecho);
+            }
+
+
+
+
+
+        }
+        private void EquilibrarArbol(Int32 ini, Int32 fin)
+        {
+            Int32 m = (ini + fin) / 2;
+            if (ini<=fin)
+            {
+                Agregar(vector[m]);
+                EquilibrarArbol(ini, m - 1);
+                EquilibrarArbol(m + 1, fin);
+            }
+
+
+
+        }
+
+
+        public void Eliminar()
+        {
+            
+
+
+
+
+
+        }
 
 
 
