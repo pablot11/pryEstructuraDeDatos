@@ -368,16 +368,13 @@ namespace pryEstructuraDatos
         public void Eliminar(int Codigo)
         {
             Nodo NodoPadre = Raiz;
+            i = 0;
             CargarVectorEliminar(NodoPadre, Codigo);
-            Raiz = null;
-            EquilibrarArbol(0, i - 1);
-
-
-
+            Raiz = null;            
+            if (i>0) EquilibrarArbol(0, i - 1);
         }
         public void CargarVectorEliminar(Nodo NodoPadre, int Codigo)
         {
-            int varCodigo = Codigo;
             if (NodoPadre.Izquierdo != null)
             {
                 CargarVectorEliminar(NodoPadre.Izquierdo, Codigo);
@@ -391,10 +388,6 @@ namespace pryEstructuraDatos
             {
                 CargarVectorEliminar(NodoPadre.Derecho, Codigo);
             }
-
-
-
-
 
         }
 

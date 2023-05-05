@@ -68,9 +68,22 @@ namespace pryEstructuraDatos
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
+        {         
             int varCodigo = Convert.ToInt32(lstCodigo.Text);
             ObjArbolBinario.Eliminar(varCodigo);
+            if (ObjArbolBinario.Raiz != null)
+            {
+                ObjArbolBinario.Recorrer(grlMostrar);
+                ObjArbolBinario.Recorrer(lstMostrar);
+                ObjArbolBinario.Recorrer(lstCodigo);
+                ObjArbolBinario.Recorrer(tvMostrar);
+            }
+            else
+            {
+                grlMostrar.Rows.Clear();
+
+            }
+
         }
     }
 }
