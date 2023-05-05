@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace pryEstructuraDatos
 {
     internal class clsArbolBinario
     {
         private Nodo Inicio;
+        StreamWriter sw = new StreamWriter("Recorrer.csv", true);
         public Nodo Raiz
         {
             get {return Inicio;}
@@ -129,6 +130,27 @@ namespace pryEstructuraDatos
             TreeView.Nodes.Add(R.Codigo.ToString());
             if (R.Izquierdo != null) InOrdenAsc(TreeView, R.Izquierdo);
         }//--------------------------------Fin InOrdenAsc TreeView----------------------//
+
+        public void Recorrer(StreamWriter sw)
+        {
+            InOrdenAsc(sw, Raiz);
+        }
+        public void InOrdenAsc(StreamWriter sw, Nodo R)
+        {
+            if (R.Derecho != null) InOrdenAsc(sw, R.Derecho);
+            sw.Write(R.Codigo);
+            sw.Write(";");
+            sw.Write(R.Nombre);
+            sw.Write(";");
+            sw.WriteLine(R.Tramite);
+            if (R.Izquierdo != null) InOrdenAsc(sw, R.Izquierdo);
+        }
+
+
+
+
+
+
 
         //-----------------------------Procedimientos Recorrer InOrdenDes-----------------------------------//
         //-------------------------------------------------------------------------------------------------//
@@ -343,16 +365,38 @@ namespace pryEstructuraDatos
         }
 
 
-        public void Eliminar()
+        public void Eliminar(int Codigo)
         {
-            
+            Nodo NodoPadre = Raiz;
+            CargarVectorEliminar(NodoPadre, Codigo);
+            Raiz = null;
+            EquilibrarArbol(0, i - 1);
+
+
+
+        }
+        public void CargarVectorEliminar(Nodo NodoPadre, int Codigo)
+        {
+            int varCodigo = Codigo;
+            if (NodoPadre.Izquierdo != null)
+            {
+                CargarVectorEliminar(NodoPadre.Izquierdo, Codigo);
+            }
+            if (NodoPadre.Codigo != Codigo)
+            {
+                vector[i] = NodoPadre;
+                i++;
+            }
+            if (NodoPadre.Derecho != null)
+            {
+                CargarVectorEliminar(NodoPadre.Derecho, Codigo);
+            }
 
 
 
 
 
         }
-
 
 
     }

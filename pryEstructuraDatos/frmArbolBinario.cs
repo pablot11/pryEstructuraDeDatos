@@ -66,6 +66,12 @@ namespace pryEstructuraDatos
             ObjArbolBinario.RecorrerPost(lstCodigo);
             ObjArbolBinario.RecorrerPost(tvMostrar);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int varCodigo = Convert.ToInt32(lstCodigo.Text);
+            ObjArbolBinario.Eliminar(varCodigo);
+        }
     }
 }
 
