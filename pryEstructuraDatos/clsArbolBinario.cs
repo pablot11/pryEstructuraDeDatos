@@ -60,7 +60,9 @@ namespace pryEstructuraDatos
         {
             i = 0;
             CargarVectorInOrden(Raiz);
+
             Raiz = null;
+     
             EquilibrarArbol(0, i - 1);
 
         }

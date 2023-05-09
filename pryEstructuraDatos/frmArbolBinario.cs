@@ -21,6 +21,24 @@ namespace pryEstructuraDatos
             InitializeComponent();
         }
 
+        //Procedimientos desarrollador
+        public void LimpiarBotones()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+
+        }
+        public void LimpiarOpt()
+        {
+            optAsc.Checked = false;
+            optDes.Checked = false;
+            optInOrden.Checked = false;
+            optPostOrden.Checked = false;
+            optPreOrden.Checked = false;
+
+        }
+
         //Botones
 
 
@@ -40,19 +58,27 @@ namespace pryEstructuraDatos
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (ObjArbolBinario.Raiz != null)
-            {
+
                 int varCodigo = Convert.ToInt32(lstCodigo.Text);
                 ObjArbolBinario.Eliminar(varCodigo);
-                ObjArbolBinario.Recorrer(grlMostrar);
-                ObjArbolBinario.Recorrer(lstMostrar);
-                ObjArbolBinario.Recorrer(lstCodigo);
-            }
-            else
-            {
-                grlMostrar.Rows.Clear();
-                btnEliminar.Enabled = false;
-            }
+                if (ObjArbolBinario.Raiz != null)
+                {
+                    ObjArbolBinario.Recorrer(grlMostrar);
+                    ObjArbolBinario.Recorrer(lstMostrar);
+                    ObjArbolBinario.Recorrer(lstCodigo);
+                }
+                else
+                {
+                    grlMostrar.Rows.Clear();
+                    lstCodigo.Items.Clear();
+                    lstCodigo.SelectedIndex = -1;
+                    LimpiarBotones();
+                    LimpiarOpt();
+                    
+
+                }
+
+
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
