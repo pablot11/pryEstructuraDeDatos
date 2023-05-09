@@ -49,26 +49,30 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.mrcOrden = new System.Windows.Forms.GroupBox();
-            this.optInOrdenAsc = new System.Windows.Forms.RadioButton();
-            this.optInOrdenDes = new System.Windows.Forms.RadioButton();
+            this.optInOrden = new System.Windows.Forms.RadioButton();
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
+            this.optAsc = new System.Windows.Forms.RadioButton();
+            this.optDes = new System.Windows.Forms.RadioButton();
             this.tvMostrar = new System.Windows.Forms.TreeView();
+            this.mrcForma = new System.Windows.Forms.GroupBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.mrcMostrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grlMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcElementoNuevo.SuspendLayout();
             this.mrcOrden.SuspendLayout();
+            this.mrcForma.SuspendLayout();
             this.SuspendLayout();
             // 
             // mrcMostrar
             // 
             this.mrcMostrar.Controls.Add(this.lstMostrar);
             this.mrcMostrar.Controls.Add(this.grlMostrar);
-            this.mrcMostrar.Location = new System.Drawing.Point(11, 196);
+            this.mrcMostrar.Location = new System.Drawing.Point(12, 196);
             this.mrcMostrar.Name = "mrcMostrar";
-            this.mrcMostrar.Size = new System.Drawing.Size(564, 193);
+            this.mrcMostrar.Size = new System.Drawing.Size(572, 188);
             this.mrcMostrar.TabIndex = 18;
             this.mrcMostrar.TabStop = false;
             this.mrcMostrar.Text = "Listado en una Lista y una Grilla";
@@ -126,7 +130,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(9, 52);
+            this.btnEliminar.Location = new System.Drawing.Point(9, 67);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(179, 21);
             this.btnEliminar.TabIndex = 14;
@@ -141,7 +145,7 @@
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Location = new System.Drawing.Point(378, 12);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(197, 80);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(205, 178);
             this.mrcElementoEliminado.TabIndex = 16;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Elimnado:";
@@ -150,7 +154,7 @@
             // 
             this.lstCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(55, 25);
+            this.lstCodigo.Location = new System.Drawing.Point(55, 40);
             this.lstCodigo.Name = "lstCodigo";
             this.lstCodigo.Size = new System.Drawing.Size(133, 21);
             this.lstCodigo.TabIndex = 2;
@@ -158,7 +162,7 @@
             // lblCodigoEliminar
             // 
             this.lblCodigoEliminar.AutoSize = true;
-            this.lblCodigoEliminar.Location = new System.Drawing.Point(6, 25);
+            this.lblCodigoEliminar.Location = new System.Drawing.Point(6, 40);
             this.lblCodigoEliminar.Name = "lblCodigoEliminar";
             this.lblCodigoEliminar.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoEliminar.TabIndex = 1;
@@ -243,46 +247,32 @@
             // 
             // mrcOrden
             // 
-            this.mrcOrden.Controls.Add(this.optInOrdenAsc);
-            this.mrcOrden.Controls.Add(this.optInOrdenDes);
+            this.mrcOrden.Controls.Add(this.optInOrden);
             this.mrcOrden.Controls.Add(this.optPostOrden);
             this.mrcOrden.Controls.Add(this.optPreOrden);
-            this.mrcOrden.Location = new System.Drawing.Point(378, 98);
+            this.mrcOrden.Location = new System.Drawing.Point(589, 12);
             this.mrcOrden.Name = "mrcOrden";
-            this.mrcOrden.Size = new System.Drawing.Size(197, 92);
+            this.mrcOrden.Size = new System.Drawing.Size(173, 97);
             this.mrcOrden.TabIndex = 19;
             this.mrcOrden.TabStop = false;
             this.mrcOrden.Text = "Listar en Orden:";
             // 
-            // optInOrdenAsc
+            // optInOrden
             // 
-            this.optInOrdenAsc.AutoSize = true;
-            this.optInOrdenAsc.Enabled = false;
-            this.optInOrdenAsc.Location = new System.Drawing.Point(9, 34);
-            this.optInOrdenAsc.Name = "optInOrdenAsc";
-            this.optInOrdenAsc.Size = new System.Drawing.Size(82, 17);
-            this.optInOrdenAsc.TabIndex = 22;
-            this.optInOrdenAsc.TabStop = true;
-            this.optInOrdenAsc.Text = "Ascendente";
-            this.optInOrdenAsc.UseVisualStyleBackColor = true;
-            this.optInOrdenAsc.CheckedChanged += new System.EventHandler(this.optInOrdenAsc_CheckedChanged);
-            // 
-            // optInOrdenDes
-            // 
-            this.optInOrdenDes.AutoSize = true;
-            this.optInOrdenDes.Location = new System.Drawing.Point(9, 59);
-            this.optInOrdenDes.Name = "optInOrdenDes";
-            this.optInOrdenDes.Size = new System.Drawing.Size(89, 17);
-            this.optInOrdenDes.TabIndex = 21;
-            this.optInOrdenDes.TabStop = true;
-            this.optInOrdenDes.Text = "Descendente";
-            this.optInOrdenDes.UseVisualStyleBackColor = true;
-            this.optInOrdenDes.CheckedChanged += new System.EventHandler(this.optInOrdenDes_CheckedChanged);
+            this.optInOrden.AutoSize = true;
+            this.optInOrden.Location = new System.Drawing.Point(15, 19);
+            this.optInOrden.Name = "optInOrden";
+            this.optInOrden.Size = new System.Drawing.Size(63, 17);
+            this.optInOrden.TabIndex = 25;
+            this.optInOrden.TabStop = true;
+            this.optInOrden.Text = "InOrden";
+            this.optInOrden.UseVisualStyleBackColor = true;
+            this.optInOrden.CheckedChanged += new System.EventHandler(this.optInOrden_CheckedChanged);
             // 
             // optPostOrden
             // 
             this.optPostOrden.AutoSize = true;
-            this.optPostOrden.Location = new System.Drawing.Point(110, 59);
+            this.optPostOrden.Location = new System.Drawing.Point(15, 42);
             this.optPostOrden.Name = "optPostOrden";
             this.optPostOrden.Size = new System.Drawing.Size(75, 17);
             this.optPostOrden.TabIndex = 24;
@@ -294,7 +284,7 @@
             // optPreOrden
             // 
             this.optPreOrden.AutoSize = true;
-            this.optPreOrden.Location = new System.Drawing.Point(110, 34);
+            this.optPreOrden.Location = new System.Drawing.Point(15, 65);
             this.optPreOrden.Name = "optPreOrden";
             this.optPreOrden.Size = new System.Drawing.Size(70, 17);
             this.optPreOrden.TabIndex = 23;
@@ -303,18 +293,65 @@
             this.optPreOrden.UseVisualStyleBackColor = true;
             this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
             // 
+            // optAsc
+            // 
+            this.optAsc.AutoSize = true;
+            this.optAsc.Location = new System.Drawing.Point(15, 19);
+            this.optAsc.Name = "optAsc";
+            this.optAsc.Size = new System.Drawing.Size(82, 17);
+            this.optAsc.TabIndex = 22;
+            this.optAsc.TabStop = true;
+            this.optAsc.Text = "Ascendente";
+            this.optAsc.UseVisualStyleBackColor = true;
+            this.optAsc.CheckedChanged += new System.EventHandler(this.optAsc_CheckedChanged);
+            // 
+            // optDes
+            // 
+            this.optDes.AutoSize = true;
+            this.optDes.Location = new System.Drawing.Point(15, 45);
+            this.optDes.Name = "optDes";
+            this.optDes.Size = new System.Drawing.Size(89, 17);
+            this.optDes.TabIndex = 21;
+            this.optDes.TabStop = true;
+            this.optDes.Text = "Descendente";
+            this.optDes.UseVisualStyleBackColor = true;
+            this.optDes.CheckedChanged += new System.EventHandler(this.optDes_CheckedChanged);
+            // 
             // tvMostrar
             // 
-            this.tvMostrar.Location = new System.Drawing.Point(581, 215);
+            this.tvMostrar.Location = new System.Drawing.Point(590, 225);
             this.tvMostrar.Name = "tvMostrar";
-            this.tvMostrar.Size = new System.Drawing.Size(199, 160);
+            this.tvMostrar.Size = new System.Drawing.Size(173, 159);
             this.tvMostrar.TabIndex = 20;
+            // 
+            // mrcForma
+            // 
+            this.mrcForma.Controls.Add(this.optAsc);
+            this.mrcForma.Controls.Add(this.optDes);
+            this.mrcForma.Location = new System.Drawing.Point(589, 115);
+            this.mrcForma.Name = "mrcForma";
+            this.mrcForma.Size = new System.Drawing.Size(173, 75);
+            this.mrcForma.TabIndex = 23;
+            this.mrcForma.TabStop = false;
+            this.mrcForma.Text = "Forma:";
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Location = new System.Drawing.Point(589, 196);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(173, 23);
+            this.btnGrabar.TabIndex = 25;
+            this.btnGrabar.Text = "Grabar Archivo";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 381);
+            this.ClientSize = new System.Drawing.Size(778, 399);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.mrcForma);
             this.Controls.Add(this.tvMostrar);
             this.Controls.Add(this.mrcOrden);
             this.Controls.Add(this.mrcMostrar);
@@ -332,6 +369,8 @@
             this.mrcElementoNuevo.PerformLayout();
             this.mrcOrden.ResumeLayout(false);
             this.mrcOrden.PerformLayout();
+            this.mrcForma.ResumeLayout(false);
+            this.mrcForma.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -360,8 +399,11 @@
         private System.Windows.Forms.GroupBox mrcOrden;
         private System.Windows.Forms.RadioButton optPostOrden;
         private System.Windows.Forms.RadioButton optPreOrden;
-        private System.Windows.Forms.RadioButton optInOrdenAsc;
-        private System.Windows.Forms.RadioButton optInOrdenDes;
+        private System.Windows.Forms.RadioButton optAsc;
+        private System.Windows.Forms.RadioButton optDes;
         private System.Windows.Forms.TreeView tvMostrar;
+        private System.Windows.Forms.RadioButton optInOrden;
+        private System.Windows.Forms.GroupBox mrcForma;
+        private System.Windows.Forms.Button btnGrabar;
     }
 }
