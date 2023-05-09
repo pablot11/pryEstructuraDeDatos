@@ -430,7 +430,17 @@ namespace pryEstructuraDatos
         }
 
         //---------------------------------------PreOrdenDes-------------------------------------//
-
+        public void RecorrerPreDes(TreeView TreeView)
+        {
+            TreeView.Nodes.Clear();
+            PreOrdenDes(TreeView.Nodes, Raiz);
+        }
+        public void PreOrdenDes(TreeNodeCollection NodoPadre, Nodo R)
+        {
+            TreeNode NuevoNodoTv = NodoPadre.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) PreOrdenDes(NuevoNodoTv.Nodes, R.Izquierdo);
+            if (R.Derecho != null) PreOrdenDes(NuevoNodoTv.Nodes, R.Derecho);
+        }
 
         //-------------------------------------------------------------------------------------------------------------------------//
         //-----------------------------------------------------------Archivo---------------------------------------------------------//

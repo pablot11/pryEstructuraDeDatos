@@ -127,6 +127,7 @@ namespace pryEstructuraDatos
                 ObjArbolBinario.RecorrerPre(grlMostrar);
                 ObjArbolBinario.RecorrerPre(lstMostrar);
                 ObjArbolBinario.RecorrerPre(lstCodigo);
+                ObjArbolBinario.RecorrerPre(tvMostrar);
             }
   
         }
@@ -176,8 +177,9 @@ namespace pryEstructuraDatos
                 }
                 if (optPreOrden.Checked == true)
                 {
-                    ObjArbolBinario.RecorrerPreDes(grlMostrar); ObjArbolBinario.RecorrerPreDes(lstMostrar); ObjArbolBinario.RecorrerPreDes(lstCodigo);
+                    ObjArbolBinario.RecorrerPreDes(grlMostrar); ObjArbolBinario.RecorrerPreDes(lstMostrar); ObjArbolBinario.RecorrerPreDes(lstCodigo); ObjArbolBinario.RecorrerPreDes(tvMostrar);
                 }
+
             }          
            
         }
