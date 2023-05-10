@@ -87,6 +87,7 @@ namespace pryEstructuraDatos
         private void btnEliminar_Click(object sender, EventArgs e)
         {
                 btnEliminar.Enabled = false;
+                btnBuscar.Enabled = false;
                 int varCodigo = Convert.ToInt32(lstCodigo.Text);
                 ObjArbolBinario.Eliminar(varCodigo);
                 if (ObjArbolBinario.Raiz != null)
@@ -273,24 +274,18 @@ namespace pryEstructuraDatos
 
         private void lstCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstCodigo.SelectedIndex != -1)
+            if (lstCodigo.SelectedIndex != -1 && lstCodigo.SelectedIndex != -1)
             {
                 btnEliminar.Enabled = true;
+                btnBuscar.Enabled = true;
             }
             else
             {
                 btnEliminar.Enabled = false;
+                btnBuscar.Enabled=false;
             }
         }
         //----------------------------Keypress-----------------------//
-
-
-
-
-
-
-
-
 
         //Load formulario
         private void frmArbolBinario_Load(object sender, EventArgs e)
@@ -306,6 +301,18 @@ namespace pryEstructuraDatos
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarSoloLetras(sender, e);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            LimpiarOpt();
+            btnBuscar.Enabled = false;
+            int varCodigo = Convert.ToInt32(lstCodigo.Text);
+            grlMostrar.Rows.Clear();
+            lstMostrar.Items.Clear();
+            tvMostrar.Nodes.Clear();
+            ObjArbolBinario.Buscar(varCodigo, grlMostrar, lstMostrar);
+            
         }
     }
 }

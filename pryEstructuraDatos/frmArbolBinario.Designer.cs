@@ -57,6 +57,7 @@
             this.tvMostrar = new System.Windows.Forms.TreeView();
             this.mrcForma = new System.Windows.Forms.GroupBox();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.mrcMostrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grlMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).BeginInit();
@@ -133,7 +134,7 @@
             this.btnEliminar.Enabled = false;
             this.btnEliminar.Location = new System.Drawing.Point(9, 67);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(179, 21);
+            this.btnEliminar.Size = new System.Drawing.Size(86, 21);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -141,6 +142,7 @@
             // 
             // mrcElementoEliminado
             // 
+            this.mrcElementoEliminado.Controls.Add(this.btnBuscar);
             this.mrcElementoEliminado.Controls.Add(this.lstCodigo);
             this.mrcElementoEliminado.Controls.Add(this.lblCodigoEliminar);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
@@ -354,6 +356,17 @@
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Enabled = false;
+            this.btnBuscar.Location = new System.Drawing.Point(101, 67);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(87, 23);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +381,7 @@
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcElementoNuevo);
             this.Name = "frmArbolBinario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras Ramificadas - Arbol Binario";
             this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.mrcMostrar.ResumeLayout(false);
@@ -415,5 +429,6 @@
         private System.Windows.Forms.RadioButton optInOrden;
         private System.Windows.Forms.GroupBox mrcForma;
         private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

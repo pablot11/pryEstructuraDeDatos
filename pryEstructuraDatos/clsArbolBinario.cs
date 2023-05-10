@@ -123,6 +123,29 @@ namespace pryEstructuraDatos
 
         }
 
+        public void Buscar(int Codigo, DataGridView dgv, ListBox ListBox)
+        {
+            BuscarNodo(Raiz, Codigo, dgv, ListBox) ;
+        }
+        public void BuscarNodo(Nodo R, int Codigo, DataGridView dgv, ListBox ListBox)
+        {
+            if (R.Izquierdo != null)
+            {
+                BuscarNodo(R.Izquierdo, Codigo, dgv, ListBox);          
+            }
+            if (R.Codigo == Codigo)
+            {
+                dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+                ListBox.Items.Add(R.Codigo + " " + R.Nombre + " " + R.Tramite);
+     
+            }
+            if (R.Derecho != null)
+            {
+                 BuscarNodo(R.Derecho, Codigo, dgv, ListBox);
+            }
+                
+
+        }
 
         //-------------------------------------------------------------------------------------------------------------------------//
         //--------------------------------------------------------ListBox---------------------------------------------------------//
@@ -589,14 +612,6 @@ namespace pryEstructuraDatos
             if (R.Izquierdo != null) PreOrdenDesArchivo(NomArchi, R.Izquierdo);
             if (R.Derecho != null) PreOrdenDesArchivo(NomArchi, R.Derecho);
         }
-
-
-
-
-
-
-
-
 
 
     }
