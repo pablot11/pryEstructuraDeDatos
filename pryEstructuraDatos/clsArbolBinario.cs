@@ -407,6 +407,21 @@ namespace pryEstructuraDatos
 
         //---------------------------------------InOrdenAsc -----------------------------------//
 
+        public void Recorrer(TreeView TreeView)
+        {
+            TreeView.Nodes.Clear();
+            InOrdenAsc(TreeView.Nodes, Raiz);
+        }
+        public void InOrdenAsc(TreeNodeCollection NodoPadre, Nodo R)
+        {
+            if (R.Derecho != null) InOrdenAsc(NodoPadre, R.Derecho);
+            TreeNode NuevoNodoTv = NodoPadre.Add(R.Codigo.ToString());
+            if (R.Izquierdo != null) InOrdenAsc(NuevoNodoTv.Nodes, R.Izquierdo);
+        }
+
+
+
+
 
         //---------------------------------------InOrdenDes-------------------------------------//
 

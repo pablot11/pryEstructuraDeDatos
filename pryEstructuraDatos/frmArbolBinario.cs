@@ -27,6 +27,7 @@ namespace pryEstructuraDatos
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+            txtCodigo.Focus();
 
         }
         public void LimpiarOpt()
@@ -36,6 +37,32 @@ namespace pryEstructuraDatos
             optInOrden.Checked = false;
             optPostOrden.Checked = false;
             optPreOrden.Checked = false;
+
+        }
+        public void HabilitarAgregar()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+        private void ValidarSoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
+        }
+        private void ValidarSoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
 
         }
 
@@ -55,10 +82,11 @@ namespace pryEstructuraDatos
             ObjArbolBinario.Recorrer(lstCodigo);
             optInOrden.Checked = true;
             optAsc.Checked = true;
+            LimpiarBotones();
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+                btnEliminar.Enabled = false;
                 int varCodigo = Convert.ToInt32(lstCodigo.Text);
                 ObjArbolBinario.Eliminar(varCodigo);
                 if (ObjArbolBinario.Raiz != null)
@@ -83,7 +111,7 @@ namespace pryEstructuraDatos
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (optAsc.Checked != true)
+            if (ObjArbolBinario.Raiz != null)
             {
                 StreamWriter sw = new StreamWriter("Arbol.csv");
                 if (optInOrden.Checked == true && optAsc.Checked == true)
@@ -112,55 +140,99 @@ namespace pryEstructuraDatos
                 }
                 sw.Dispose();
             }
-            MessageBox.Show("Seleccione una forma de listar");
+            else
+            {
+                MessageBox.Show("Seleccione una forma de listar");
+            }
+           
 
         }
         //----------------------------------------------------------------------------------------------------//
 
-        //Botones de opcion InOrde,PreOrden,PostOrden
-        private void optPreOrden_CheckedChanged(object sender, EventArgs e)
-        {
-            if(ObjArbolBinario.Raiz != null)
-            {
-                optAsc.Checked = true;
-                optDes.Checked = false;
-                ObjArbolBinario.RecorrerPre(grlMostrar);
-                ObjArbolBinario.RecorrerPre(lstMostrar);
-                ObjArbolBinario.RecorrerPre(lstCodigo);
-                ObjArbolBinario.RecorrerPre(tvMostrar);
-            }
-  
-        }
+        //`Procedimientos click
 
-        private void optPostOrden_CheckedChanged(object sender, EventArgs e)
+
+
+
+
+        private void optInOrden_Click(object sender, EventArgs e)
         {
             if (ObjArbolBinario.Raiz != null)
             {
-                optAsc.Checked = true;
+                optAsc.Checked = false;
                 optDes.Checked = false;
-                ObjArbolBinario.RecorrerPost(grlMostrar);
-                ObjArbolBinario.RecorrerPost(lstMostrar);
-                ObjArbolBinario.RecorrerPost(lstCodigo);
 
-            } 
+                //ObjArbolBinario.Recorrer(grlMostrar);
+                //ObjArbolBinario.Recorrer(lstMostrar);
+                //ObjArbolBinario.Recorrer(lstCodigo);
+                //ObjArbolBinario.Recorrer(tvMostrar);
+
+            }
         }
 
-
-        private void optInOrden_CheckedChanged(object sender, EventArgs e)
+        private void optPostOrden_Click(object sender, EventArgs e)
         {
             if (ObjArbolBinario.Raiz != null)
             {
-                optAsc.Checked = true;
+                optAsc.Checked = false;
                 optDes.Checked = false;
-                ObjArbolBinario.Recorrer(grlMostrar);
-                ObjArbolBinario.Recorrer(lstMostrar);
-                ObjArbolBinario.Recorrer(lstCodigo);
+
+                //ObjArbolBinario.Recorrer(grlMostrar);
+                //ObjArbolBinario.Recorrer(lstMostrar);
+                //ObjArbolBinario.Recorrer(lstCodigo);
+                //ObjArbolBinario.Recorrer(tvMostrar);
 
             }
-           
+
+
+
         }
-        //Botones de opcion Ascendente y descendente
-        private void optDes_CheckedChanged(object sender, EventArgs e)
+
+        private void optPreOrden_Click(object sender, EventArgs e)
+        {
+            if (ObjArbolBinario.Raiz != null)
+            {
+                optAsc.Checked = false;
+                optDes.Checked = false;
+
+                //ObjArbolBinario.Recorrer(grlMostrar);
+                //ObjArbolBinario.Recorrer(lstMostrar);
+                //ObjArbolBinario.Recorrer(lstCodigo);
+                //ObjArbolBinario.Recorrer(tvMostrar);
+
+            }
+        }
+
+        private void optAsc_Click(object sender, EventArgs e)
+        {
+            if (ObjArbolBinario.Raiz != null)
+            {
+                if (optInOrden.Checked == true)
+                {
+                    ObjArbolBinario.Recorrer(grlMostrar);
+                    ObjArbolBinario.Recorrer(lstMostrar);
+                    ObjArbolBinario.Recorrer(lstCodigo);
+                    ObjArbolBinario.Recorrer(tvMostrar);
+                  
+
+
+                }
+                if (optPostOrden.Checked == true)
+                {
+                    ObjArbolBinario.RecorrerPost(grlMostrar); ObjArbolBinario.RecorrerPost(lstMostrar); ObjArbolBinario.RecorrerPost(lstCodigo);
+                }
+                if (optPreOrden.Checked == true)
+                {
+                    ObjArbolBinario.RecorrerPre(grlMostrar);
+                    ObjArbolBinario.RecorrerPre(lstMostrar);
+                    ObjArbolBinario.RecorrerPre(lstCodigo);
+                    ObjArbolBinario.RecorrerPre(tvMostrar);
+                }
+            }
+
+        }
+
+        private void optDes_Click(object sender, EventArgs e)
         {
             if (ObjArbolBinario.Raiz != null)
             {
@@ -180,39 +252,61 @@ namespace pryEstructuraDatos
                     ObjArbolBinario.RecorrerPreDes(grlMostrar); ObjArbolBinario.RecorrerPreDes(lstMostrar); ObjArbolBinario.RecorrerPreDes(lstCodigo); ObjArbolBinario.RecorrerPreDes(tvMostrar);
                 }
 
-            }          
-           
-        }
-
-        private void optAsc_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ObjArbolBinario.Raiz != null)
-            {
-                if (optInOrden.Checked == true)
-                {
-                    ObjArbolBinario.Recorrer(grlMostrar);
-                    ObjArbolBinario.Recorrer(lstMostrar);
-                    ObjArbolBinario.Recorrer(lstCodigo);
-
-
-                }
-                if (optPostOrden.Checked == true)
-                {
-                    ObjArbolBinario.RecorrerPost(grlMostrar); ObjArbolBinario.RecorrerPost(lstMostrar); ObjArbolBinario.RecorrerPost(lstCodigo);
-                }
-                if (optPreOrden.Checked == true)
-                {
-                    ObjArbolBinario.RecorrerPre(grlMostrar);
-                    ObjArbolBinario.RecorrerPre(lstMostrar);
-                    ObjArbolBinario.RecorrerPre(lstCodigo);
-                    ObjArbolBinario.RecorrerPre(tvMostrar);
-                }
             }
-          
-         
+
+        }
+        //----------------------TextChanged Controles---------------------------------------//
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            HabilitarAgregar();
         }
 
-  
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            HabilitarAgregar();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            HabilitarAgregar();
+        }
+
+        private void lstCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstCodigo.SelectedIndex != -1)
+            {
+                btnEliminar.Enabled = true;
+            }
+            else
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
+        //----------------------------Keypress-----------------------//
+
+
+
+
+
+
+
+
+
+        //Load formulario
+        private void frmArbolBinario_Load(object sender, EventArgs e)
+        {
+            txtCodigo.Focus();
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarSoloNumeros(sender, e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarSoloLetras(sender, e);
+        }
     }
 }
 

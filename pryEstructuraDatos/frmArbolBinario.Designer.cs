@@ -130,10 +130,11 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Location = new System.Drawing.Point(9, 67);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(179, 21);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -157,7 +158,8 @@
             this.lstCodigo.Location = new System.Drawing.Point(55, 40);
             this.lstCodigo.Name = "lstCodigo";
             this.lstCodigo.Size = new System.Drawing.Size(133, 21);
-            this.lstCodigo.TabIndex = 2;
+            this.lstCodigo.TabIndex = 5;
+            this.lstCodigo.SelectedIndexChanged += new System.EventHandler(this.lstCodigo_SelectedIndexChanged);
             // 
             // lblCodigoEliminar
             // 
@@ -170,10 +172,11 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(9, 145);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(158, 23);
-            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -201,6 +204,8 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtTramite
             // 
@@ -209,6 +214,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 3;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // lblTramite
             // 
@@ -235,6 +241,8 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // lblCodigo
             // 
@@ -263,11 +271,11 @@
             this.optInOrden.Location = new System.Drawing.Point(15, 19);
             this.optInOrden.Name = "optInOrden";
             this.optInOrden.Size = new System.Drawing.Size(63, 17);
-            this.optInOrden.TabIndex = 25;
+            this.optInOrden.TabIndex = 7;
             this.optInOrden.TabStop = true;
             this.optInOrden.Text = "InOrden";
             this.optInOrden.UseVisualStyleBackColor = true;
-            this.optInOrden.CheckedChanged += new System.EventHandler(this.optInOrden_CheckedChanged);
+            this.optInOrden.Click += new System.EventHandler(this.optInOrden_Click);
             // 
             // optPostOrden
             // 
@@ -275,11 +283,11 @@
             this.optPostOrden.Location = new System.Drawing.Point(15, 42);
             this.optPostOrden.Name = "optPostOrden";
             this.optPostOrden.Size = new System.Drawing.Size(75, 17);
-            this.optPostOrden.TabIndex = 24;
+            this.optPostOrden.TabIndex = 8;
             this.optPostOrden.TabStop = true;
             this.optPostOrden.Text = "PostOrden";
             this.optPostOrden.UseVisualStyleBackColor = true;
-            this.optPostOrden.CheckedChanged += new System.EventHandler(this.optPostOrden_CheckedChanged);
+            this.optPostOrden.Click += new System.EventHandler(this.optPostOrden_Click);
             // 
             // optPreOrden
             // 
@@ -287,11 +295,11 @@
             this.optPreOrden.Location = new System.Drawing.Point(15, 65);
             this.optPreOrden.Name = "optPreOrden";
             this.optPreOrden.Size = new System.Drawing.Size(70, 17);
-            this.optPreOrden.TabIndex = 23;
+            this.optPreOrden.TabIndex = 9;
             this.optPreOrden.TabStop = true;
             this.optPreOrden.Text = "PreOrden";
             this.optPreOrden.UseVisualStyleBackColor = true;
-            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
+            this.optPreOrden.Click += new System.EventHandler(this.optPreOrden_Click);
             // 
             // optAsc
             // 
@@ -299,11 +307,11 @@
             this.optAsc.Location = new System.Drawing.Point(15, 19);
             this.optAsc.Name = "optAsc";
             this.optAsc.Size = new System.Drawing.Size(82, 17);
-            this.optAsc.TabIndex = 22;
+            this.optAsc.TabIndex = 10;
             this.optAsc.TabStop = true;
             this.optAsc.Text = "Ascendente";
             this.optAsc.UseVisualStyleBackColor = true;
-            this.optAsc.CheckedChanged += new System.EventHandler(this.optAsc_CheckedChanged);
+            this.optAsc.Click += new System.EventHandler(this.optAsc_Click);
             // 
             // optDes
             // 
@@ -311,11 +319,11 @@
             this.optDes.Location = new System.Drawing.Point(15, 45);
             this.optDes.Name = "optDes";
             this.optDes.Size = new System.Drawing.Size(89, 17);
-            this.optDes.TabIndex = 21;
+            this.optDes.TabIndex = 11;
             this.optDes.TabStop = true;
             this.optDes.Text = "Descendente";
             this.optDes.UseVisualStyleBackColor = true;
-            this.optDes.CheckedChanged += new System.EventHandler(this.optDes_CheckedChanged);
+            this.optDes.Click += new System.EventHandler(this.optDes_Click);
             // 
             // tvMostrar
             // 
@@ -340,7 +348,8 @@
             this.btnGrabar.Location = new System.Drawing.Point(589, 196);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(173, 23);
-            this.btnGrabar.TabIndex = 25;
+            this.btnGrabar.TabIndex = 12;
+            this.btnGrabar.TabStop = false;
             this.btnGrabar.Text = "Grabar Archivo";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -349,7 +358,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 399);
+            this.ClientSize = new System.Drawing.Size(778, 411);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.mrcForma);
             this.Controls.Add(this.tvMostrar);
@@ -360,6 +369,7 @@
             this.Controls.Add(this.mrcElementoNuevo);
             this.Name = "frmArbolBinario";
             this.Text = "Estructuras Ramificadas - Arbol Binario";
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.mrcMostrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grlMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).EndInit();
