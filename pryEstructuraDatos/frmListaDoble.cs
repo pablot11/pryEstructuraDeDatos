@@ -57,7 +57,7 @@ namespace pryEstructuraDatos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+                
             Nodo objNodo = new Nodo();
             objNodo.Nombre = txtNombre.Text;
             objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);

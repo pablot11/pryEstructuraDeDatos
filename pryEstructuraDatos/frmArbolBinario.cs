@@ -80,6 +80,7 @@ namespace pryEstructuraDatos
             ObjArbolBinario.Recorrer(grlMostrar);
             ObjArbolBinario.Recorrer(lstMostrar);
             ObjArbolBinario.Recorrer(lstCodigo);
+            ObjArbolBinario.Recorrer(tvMostrar);
             optInOrden.Checked = true;
             optAsc.Checked = true;
             LimpiarBotones();
@@ -125,11 +126,11 @@ namespace pryEstructuraDatos
                 }
                 if (optPostOrden.Checked == true && optAsc.Checked == true)
                 {
-                    ObjArbolBinario.RecorrerSwPreOrdenAsc(sw);
+                    ObjArbolBinario.RecorrerSwPostAsc(sw);
                 }
                 else if (optPostOrden.Checked == true && optDes.Checked == true)
                 {
-                    ObjArbolBinario.RecorrerSwPostAsc(sw);
+                    ObjArbolBinario.RecorrerSwPostDes(sw);
                 }
                 if (optPreOrden.Checked == true && optAsc.Checked == true)
                 {
@@ -139,11 +140,13 @@ namespace pryEstructuraDatos
                 {
                     ObjArbolBinario.RecorrerSwPreOrdenDes(sw);
                 }
+                sw.Close();
                 sw.Dispose();
             }
             else
             {
                 MessageBox.Show("Seleccione una forma de listar");
+                LimpiarOpt();
             }
            
 
