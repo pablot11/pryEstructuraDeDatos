@@ -58,6 +58,7 @@
             this.tvMostrar = new System.Windows.Forms.TreeView();
             this.mrcForma = new System.Windows.Forms.GroupBox();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnEquilibrarArbol = new System.Windows.Forms.Button();
             this.mrcMostrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grlMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).BeginInit();
@@ -148,7 +149,7 @@
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Location = new System.Drawing.Point(378, 12);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(205, 178);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(205, 123);
             this.mrcElementoEliminado.TabIndex = 16;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Elimnado:";
@@ -369,11 +370,22 @@
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
+            // btnEquilibrarArbol
+            // 
+            this.btnEquilibrarArbol.Location = new System.Drawing.Point(401, 157);
+            this.btnEquilibrarArbol.Name = "btnEquilibrarArbol";
+            this.btnEquilibrarArbol.Size = new System.Drawing.Size(158, 23);
+            this.btnEquilibrarArbol.TabIndex = 8;
+            this.btnEquilibrarArbol.Text = "Equilibrar";
+            this.btnEquilibrarArbol.UseVisualStyleBackColor = true;
+            this.btnEquilibrarArbol.Click += new System.EventHandler(this.btnEquilibrarArbol_Click);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 388);
+            this.Controls.Add(this.btnEquilibrarArbol);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.mrcForma);
             this.Controls.Add(this.tvMostrar);
@@ -432,5 +444,6 @@
         private System.Windows.Forms.GroupBox mrcForma;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnEquilibrarArbol;
     }
 }

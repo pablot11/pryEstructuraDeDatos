@@ -323,6 +323,21 @@ namespace pryEstructuraDatos
         {
 
         }
+
+        private void btnEquilibrarArbol_Click(object sender, EventArgs e)
+        {
+            if (ObjArbolBinario.Raiz != null)
+            {
+                ObjArbolBinario.Equilibrar();
+                ObjArbolBinario.Recorrer(grlMostrar);
+                ObjArbolBinario.Recorrer(lstMostrar);
+                ObjArbolBinario.Recorrer(lstCodigo);
+                ObjArbolBinario.RecorrerPre(tvMostrar);
+                MessageBox.Show("Arbol equilibrado");
+            }
+            
+          
+        }
     }
 }
 
