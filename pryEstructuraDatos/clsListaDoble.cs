@@ -56,7 +56,7 @@ namespace pryEstructuraDatos
                         while (Aux.Codigo <= Nvo.Codigo)
                         {
                             Ant = Aux;
-                            Ant = Aux.Siguiente;
+                            Aux = Aux.Siguiente;
                         }
                         Ant.Siguiente = Nvo;
                         Nvo.Siguiente = Aux;
