@@ -77,12 +77,13 @@ namespace pryEstructuraDatos
             if (objPila.Primero != null)
             {
 
-                lblCodigo.Text = objPila.Primero.Codigo.ToString();
-                lblNombre.Text = objPila.Primero.Nombre;
-                lblTramite.Text = objPila.Primero.Tramite;
+                txtCodigoEliminar.Text = objPila.Primero.Codigo.ToString();
+                txtNombreEliminar.Text = objPila.Primero.Nombre;
+                txtTramiteEliminar.Text = objPila.Primero.Tramite;
                 objPila.Eliminar();
                 objPila.Recorrer(grlMostrar);
                 objPila.Recorrer(lstMostrar);
+                
             }
             else
             {

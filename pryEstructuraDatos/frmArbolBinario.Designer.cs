@@ -38,6 +38,7 @@
             this.picCola = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.lstCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigoEliminar = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.tvMostrar = new System.Windows.Forms.TreeView();
             this.mrcForma = new System.Windows.Forms.GroupBox();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.mrcMostrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grlMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).BeginInit();
@@ -152,6 +152,17 @@
             this.mrcElementoEliminado.TabIndex = 16;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Elimnado:";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Enabled = false;
+            this.btnBuscar.Location = new System.Drawing.Point(101, 67);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(87, 23);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lstCodigo
             // 
@@ -277,6 +288,7 @@
             this.optInOrden.TabStop = true;
             this.optInOrden.Text = "InOrden";
             this.optInOrden.UseVisualStyleBackColor = true;
+            this.optInOrden.CheckedChanged += new System.EventHandler(this.optInOrden_CheckedChanged);
             this.optInOrden.Click += new System.EventHandler(this.optInOrden_Click);
             // 
             // optPostOrden
@@ -313,6 +325,7 @@
             this.optAsc.TabStop = true;
             this.optAsc.Text = "Ascendente";
             this.optAsc.UseVisualStyleBackColor = true;
+            this.optAsc.CheckedChanged += new System.EventHandler(this.optAsc_CheckedChanged);
             this.optAsc.Click += new System.EventHandler(this.optAsc_Click);
             // 
             // optDes
@@ -356,22 +369,11 @@
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Enabled = false;
-            this.btnBuscar.Location = new System.Drawing.Point(101, 67);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(87, 23);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 411);
+            this.ClientSize = new System.Drawing.Size(770, 388);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.mrcForma);
             this.Controls.Add(this.tvMostrar);

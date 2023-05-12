@@ -40,12 +40,13 @@ namespace pryEstructuraDatos
         {
             if (FilaDePersonas.Primero != null)
             {
-                lblCodigo.Text = FilaDePersonas.Primero.Codigo.ToString();
-                lblNombre.Text = FilaDePersonas.Primero.Nombre;
-                lblTramite.Text = FilaDePersonas.Primero.Tramite;
+                txtCodigoEliminar.Text = FilaDePersonas.Primero.Codigo.ToString();
+                txtNombreEliminar.Text = FilaDePersonas.Primero.Nombre;
+                txtTramiteEliminar.Text = FilaDePersonas.Primero.Tramite;
                 FilaDePersonas.Eliminar();
                 FilaDePersonas.Recorrer(grlMostrar);
                 FilaDePersonas.Recorrer(lstMostrar);
+                btnEliminar.Enabled = false;
             }
             else
             {

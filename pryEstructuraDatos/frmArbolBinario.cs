@@ -80,7 +80,7 @@ namespace pryEstructuraDatos
             ObjArbolBinario.Recorrer(grlMostrar);
             ObjArbolBinario.Recorrer(lstMostrar);
             ObjArbolBinario.Recorrer(lstCodigo);
-            ObjArbolBinario.Recorrer(tvMostrar);
+            ObjArbolBinario.RecorrerPre(tvMostrar);
             optInOrden.Checked = true;
             optAsc.Checked = true;
             LimpiarBotones();
@@ -142,6 +142,7 @@ namespace pryEstructuraDatos
                 }
                 sw.Close();
                 sw.Dispose();
+                MessageBox.Show("Se ha grabado correctamente el archivo");
             }
             else
             {
@@ -198,12 +199,6 @@ namespace pryEstructuraDatos
             {
                 optAsc.Checked = false;
                 optDes.Checked = false;
-
-                //ObjArbolBinario.Recorrer(grlMostrar);
-                //ObjArbolBinario.Recorrer(lstMostrar);
-                //ObjArbolBinario.Recorrer(lstCodigo);
-                //ObjArbolBinario.Recorrer(tvMostrar);
-
             }
         }
 
@@ -216,14 +211,14 @@ namespace pryEstructuraDatos
                     ObjArbolBinario.Recorrer(grlMostrar);
                     ObjArbolBinario.Recorrer(lstMostrar);
                     ObjArbolBinario.Recorrer(lstCodigo);
-                    ObjArbolBinario.Recorrer(tvMostrar);
-                  
+                    ObjArbolBinario.RecorrerPre(tvMostrar);
+
 
 
                 }
                 if (optPostOrden.Checked == true)
                 {
-                    ObjArbolBinario.RecorrerPost(grlMostrar); ObjArbolBinario.RecorrerPost(lstMostrar); ObjArbolBinario.RecorrerPost(lstCodigo);
+                    ObjArbolBinario.RecorrerPost(grlMostrar); ObjArbolBinario.RecorrerPost(lstMostrar); ObjArbolBinario.RecorrerPost(lstCodigo); ObjArbolBinario.RecorrerPre(tvMostrar);
                 }
                 if (optPreOrden.Checked == true)
                 {
@@ -245,15 +240,16 @@ namespace pryEstructuraDatos
                     ObjArbolBinario.RecorrerDes(grlMostrar);
                     ObjArbolBinario.RecorrerDes(lstMostrar);
                     ObjArbolBinario.RecorrerDes(lstCodigo);
+                    ObjArbolBinario.RecorrerPreDes(tvMostrar);
 
                 }
                 if (optPostOrden.Checked == true)
                 {
-                    ObjArbolBinario.RecorrerPostDes(grlMostrar); ObjArbolBinario.RecorrerPostDes(lstMostrar); ObjArbolBinario.RecorrerPostDes(lstCodigo);
+                    ObjArbolBinario.RecorrerPostDes(grlMostrar); ObjArbolBinario.RecorrerPostDes(lstMostrar); ObjArbolBinario.RecorrerPostDes(lstCodigo); ObjArbolBinario.RecorrerPreDes(tvMostrar);
                 }
                 if (optPreOrden.Checked == true)
                 {
-                    ObjArbolBinario.RecorrerPreDes(grlMostrar); ObjArbolBinario.RecorrerPreDes(lstMostrar); ObjArbolBinario.RecorrerPreDes(lstCodigo); ObjArbolBinario.RecorrerPreDes(tvMostrar);
+                    ObjArbolBinario.RecorrerPreDes(grlMostrar); ObjArbolBinario.RecorrerPreDes(lstMostrar); ObjArbolBinario.RecorrerPreDes(lstCodigo); ObjArbolBinario.RecorrerPreDes(tvMostrar); ObjArbolBinario.RecorrerPreDes(tvMostrar);
                 }
 
             }
@@ -316,6 +312,16 @@ namespace pryEstructuraDatos
             tvMostrar.Nodes.Clear();
             ObjArbolBinario.Buscar(varCodigo, grlMostrar, lstMostrar);
             
+        }
+
+        private void optInOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optAsc_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

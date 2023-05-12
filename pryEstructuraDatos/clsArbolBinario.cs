@@ -427,49 +427,6 @@ namespace pryEstructuraDatos
         //-----------------------------------------------------------TreeView---------------------------------------------------------//
         //-------------------------------------------------------------------------------------------------------------------------//
 
-
-        //---------------------------------------InOrdenAsc -----------------------------------//
-
-        public void Recorrer(TreeView TreeView)
-        {
-            TreeView.Nodes.Clear();
-            InOrdenAsc(TreeView.Nodes, Raiz);
-        }
-        public void InOrdenAsc(TreeNodeCollection NodoPadre, Nodo R)
-        {
-            TreeNode NuevoNodoTv = NodoPadre.Add(R.Codigo.ToString());
-            if (R.Izquierdo != null) InOrdenAsc(NuevoNodoTv.Nodes, R.Izquierdo);
-            if (R.Derecho != null) InOrdenAsc(NuevoNodoTv.Nodes, R.Derecho);
-        }
-
-        //---------------------------------------InOrdenDes-------------------------------------//
-        public void RecorrerDes(TreeView TreeView)
-        {
-            TreeView.Nodes.Clear();
-            InOrdenDes(TreeView.Nodes, Raiz);
-        }
-        public void InOrdenDes(TreeNodeCollection NodoPadre, Nodo R)
-        {
-            TreeNode NuevoNodoTv = NodoPadre.Add(R.Codigo.ToString());
-            if (R.Derecho != null) InOrdenDes(NuevoNodoTv.Nodes, R.Derecho);
-            if (R.Izquierdo != null) InOrdenDes(NuevoNodoTv.Nodes, R.Izquierdo);
-        }
-
-        //---------------------------------------PostOrdenAsc-------------------------------------//
-        public void RecorrerPost(TreeView TreeView)
-        {
-            TreeView.Nodes.Clear();
-            PostOrden(TreeView.Nodes, Raiz);
-        }
-        public void PostOrden(TreeNodeCollection NodoPadre, Nodo R)
-        {
-            TreeNode NuevoNodoTv = NodoPadre.Add(R.Codigo.ToString());
-            if (R.Izquierdo != null) PostOrden(NuevoNodoTv.Nodes, R.Izquierdo);
-            if (R.Derecho != null) PostOrden(NuevoNodoTv.Nodes, R.Derecho);
-        }
-
-        //---------------------------------------PostOrdenDes-------------------------------------//
-
         //---------------------------------------PreOrdenAsc-------------------------------------//
 
         public void RecorrerPre(TreeView TreeView)
@@ -518,8 +475,6 @@ namespace pryEstructuraDatos
             NomArchi.Write(R.Tramite);
             NomArchi.Write("\n");
             if (R.Derecho != null) InOrdenAscArchivo(NomArchi, R.Derecho);
-
-
         }
 
 
