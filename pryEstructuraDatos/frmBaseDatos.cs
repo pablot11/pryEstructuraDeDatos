@@ -48,15 +48,18 @@ namespace pryEstructuraDatos
 
         private void btnUnion_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM LIBRO " +
-               "WHERE IdIdioma = 2 AND IdAutor > 1 union " +
-               "SELECT * FROM LIBRO WHERE IdIdioma = 3";
+            string sql = "SELECT * " +
+                "FROM LIBRO " +
+                "WHERE IdIdioma = 2 AND IdAutor > 1 union " +
+                "SELECT * FROM LIBRO WHERE IdIdioma = 3";
             objBD.Listar(dgvConsulta, sql);
         }
 
         private void btnInterseccion_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM LIBRO WHERE IdAutor =5 AND EXISTS (SELECT * FROM LIBRO WHERE IdIdioma =3";
+            string sql = "SELECT * FROM LIBRO WHERE IdAutor =5 " +
+                "AND EXISTS " +
+                " (SELECT * FROM LIBRO WHERE IdIdioma =3) ";
             objBD.Listar(dgvConsulta, sql);
         }
     }
