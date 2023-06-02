@@ -62,5 +62,15 @@ namespace pryEstructuraDatos
                 " (SELECT * FROM LIBRO WHERE IdIdioma =3) ";
             objBD.Listar(dgvConsulta, sql);
         }
+
+        private void btnDiferencia_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT" +
+                " * FROM LIBRO WHERE IdIdioma =2 " +
+               "AND IdLibro NOT IN " +
+               " (SELECT IdLibro FROM Libro WHERE IdPais=3 ) "+
+               " ORDER BY 1 ASC";
+            objBD.Listar(dgvConsulta, sql);
+        }
     }
 }

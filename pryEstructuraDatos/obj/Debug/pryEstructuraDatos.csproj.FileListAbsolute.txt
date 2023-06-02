@@ -33,3 +33,4 @@ C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\p
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb
 C:\Users\Alumno\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmBaseDatos.resources
+C:\Users\PABLO\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmBaseDatos.resources
