@@ -43,7 +43,10 @@ namespace pryEstructuraDatos
 
         private void btnSeleccionConvulsion_Click(object sender, EventArgs e)
         {
-           
+            string sql = "SELECT * " +
+                "FROM (select * from libro where idIdioma > 1) AS X " +
+                "WHERE IDPAIS = 2";
+                objBD.Listar(dgvConsulta, sql);
         }
 
         private void btnUnion_Click(object sender, EventArgs e)
@@ -58,7 +61,7 @@ namespace pryEstructuraDatos
         private void btnInterseccion_Click(object sender, EventArgs e)
         {
             string sql = "SELECT * FROM LIBRO WHERE IdAutor =5 " +
-                "AND EXISTS " +
+                "AND IDLIBRO IN " +
                 " (SELECT * FROM LIBRO WHERE IdIdioma =3) ";
             objBD.Listar(dgvConsulta, sql);
         }
@@ -70,6 +73,15 @@ namespace pryEstructuraDatos
                "AND IdLibro NOT IN " +
                " (SELECT IdLibro FROM Libro WHERE IdPais=3 ) "+
                " ORDER BY 1 ASC";
+            objBD.Listar(dgvConsulta, sql);
+        }
+
+        private void btnJuntar_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT TITULO, NOMBRE " +
+                "FROM LIBRO INNER JOIN PAIS " +
+               "ON LIBRO.IDPAIS = PAIS.IDPAIS";
+   
             objBD.Listar(dgvConsulta, sql);
         }
     }

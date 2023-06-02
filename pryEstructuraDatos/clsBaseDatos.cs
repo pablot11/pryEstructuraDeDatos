@@ -40,6 +40,7 @@ namespace pryEstructuraDatos
             {
 
                 MessageBox.Show(ex.Message);
+                conexion.Close();
             }
         }
         public void Listar(DataGridView Grilla, string varInstruccionSQL)
@@ -62,7 +63,18 @@ namespace pryEstructuraDatos
             {
 
                 MessageBox.Show(ex.Message);
+                conexion.Close();
             }
+
+
+
+
+
+
+
+
+
+
         }
 
 

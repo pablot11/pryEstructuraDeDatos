@@ -67,6 +67,17 @@ namespace pryEstructuraDatos
 
         private void baseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void consultaEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDatos objBD = new frmConsultaBaseDatos();
+            objBD.ShowDialog();
+        }
+
+        private void operacionesConTablasDeBasesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmBaseDatos objBD = new frmBaseDatos();
             objBD.ShowDialog();
         }
