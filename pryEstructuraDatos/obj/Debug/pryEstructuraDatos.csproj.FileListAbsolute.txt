@@ -53,3 +53,5 @@ C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.exe
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.pdb
 C:\Users\Alumnos\Source\Repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmConsultaBaseDatos.resources
+C:\Users\PABLO\source\repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmConsultaBaseDatos.resources
+C:\Users\PABLO\source\repos\pryEstructuraDeDatos\pryEstructuraDatos\obj\Debug\pryEstructuraDatos.frmConsultarPorOperaciones.resources

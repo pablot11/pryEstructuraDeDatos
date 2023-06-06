@@ -76,6 +76,12 @@
     <Compile Include="frmConsultaBaseDatos.Designer.cs">
       <DependentUpon>frmConsultaBaseDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultarPorOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarPorOperaciones.Designer.cs">
+      <DependentUpon>frmConsultarPorOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDatosPersonales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaBaseDatos.resx">
       <DependentUpon>frmConsultaBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarPorOperaciones.resx">
+      <DependentUpon>frmConsultarPorOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosPersonales.resx">
       <DependentUpon>frmDatosPersonales.cs</DependentUpon>
