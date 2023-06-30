@@ -55,24 +55,25 @@
             this.lstSentencias.Name = "lstSentencias";
             this.lstSentencias.Size = new System.Drawing.Size(440, 24);
             this.lstSentencias.TabIndex = 0;
+            this.lstSentencias.SelectedIndexChanged += new System.EventHandler(this.lstSentencias_SelectedIndexChanged);
             // 
             // lblElegirConsulta
             // 
             this.lblElegirConsulta.AutoSize = true;
-            this.lblElegirConsulta.Location = new System.Drawing.Point(12, 6);
+            this.lblElegirConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElegirConsulta.Location = new System.Drawing.Point(13, 6);
             this.lblElegirConsulta.Name = "lblElegirConsulta";
-            this.lblElegirConsulta.Size = new System.Drawing.Size(253, 16);
+            this.lblElegirConsulta.Size = new System.Drawing.Size(277, 18);
             this.lblElegirConsulta.TabIndex = 1;
             this.lblElegirConsulta.Text = "Operación a realizar en la base de datos:";
             // 
             // lblSql
             // 
-            this.lblSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSql.Location = new System.Drawing.Point(12, 36);
             this.lblSql.Name = "lblSql";
             this.lblSql.Size = new System.Drawing.Size(883, 123);
             this.lblSql.TabIndex = 2;
-            this.lblSql.Text = "label2";
             // 
             // dgvConsulta
             // 
@@ -86,9 +87,10 @@
             // 
             // btnListar
             // 
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Location = new System.Drawing.Point(771, 3);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(124, 28);
+            this.btnListar.Size = new System.Drawing.Size(124, 30);
             this.btnListar.TabIndex = 4;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -98,13 +100,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 588);
+            this.ClientSize = new System.Drawing.Size(927, 533);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.lblSql);
             this.Controls.Add(this.lblElegirConsulta);
             this.Controls.Add(this.lstSentencias);
             this.Name = "frmConsultarPorOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Operaciones de Base de Datos";
             this.Load += new System.EventHandler(this.frmConsultarPorOperaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();

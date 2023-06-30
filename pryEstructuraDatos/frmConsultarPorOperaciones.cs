@@ -38,13 +38,12 @@ namespace pryEstructuraDatos
                     break;
                 //Interseccion
                 case 1:
-                    varSql = "SELECT Titulo, IdPais " +
+                    varSql = "SELECT Titulo " +
                         "FROM Libro WHERE " +
-                        "IdPais IN " +
-                        "(SELECT Cantidad FROM Libro " +
+                        "Titulo IN " +
+                        "(SELECT Titulo FROM Libro " +
                         "WHERE Cantidad >= 2)";
-                    lblSql.Text = "Muestra el titulo y el ID del pais donde se intersecte con la otra tabla donde" +
-                        "contiene la cantidad de libros que sean mayores o igual a 2";
+                    lblSql.Text = @"Muestra los titulos de los libros de los que se repitan en las 2 tablas";
                     objBD.Listar(dgvConsulta, varSql);
                     break;
                 //Juntar
@@ -53,24 +52,24 @@ namespace pryEstructuraDatos
                         "FROM Libro " +
                         "INNER JOIN Autor " +
                         "ON Libro.IdAutor = Autor.IdAutor";
-                    lblSql.Text = "Muestra los libros y autores";
+                    lblSql.Text = "Muestra los titulos de los libros de la tabla Libros con sus respectivos Autores de la tabla Autor";
                     objBD.Listar(dgvConsulta, varSql);
                     break;
                 //Proyeccion Simple
                 case 3:
-                    varSql = varSql = "SELECT Titulo " +
-                        "FROM Libro";
-                    lblSql.Text = "Muestra los titulos de los libros";
+                    varSql = varSql = "SELECT Nombre " +
+                        "FROM Idioma";
+                    lblSql.Text = "Muestra los idiomas que pueden tener los libros";
                     objBD.Listar(dgvConsulta, varSql);
                     break;
                 //Proyeccion Multiatributo
                 case 4:
                     varSql = varSql = "SELECT Titulo, Año " +
                         "FROM Libro";
-                    lblSql.Text = "Muestra los titulos de los libros y sus res";
+                    lblSql.Text = "Muestra los titulos de los libros y sus respectivos años de lanzamiento";
                     objBD.Listar(dgvConsulta, varSql);
                     break;
-                //Seleecion MultiAtributo con operador AND
+                //Seleccion MultiAtributo con operador AND
                 case 5:
                     varSql = varSql = "SELECT Titulo, Precio " +
                         "FROM Libro " +
@@ -86,7 +85,7 @@ namespace pryEstructuraDatos
                         "FROM Libro " +
                         "WHERE IdPais = 2 " +
                         "OR IdPais = 4";
-                    lblSql.Text = "Muestra los titulos de los libros donde el IdPais sea igual a 2" +
+                    lblSql.Text = "Muestra los titulos de los libros donde el IdPais sea igual a 2 " +
                         "o el idpais sea igual a 4";
                     objBD.Listar(dgvConsulta, varSql);
                     break;
@@ -95,7 +94,7 @@ namespace pryEstructuraDatos
                     varSql = varSql = "SELECT * " +
                         "FROM (SELECT Cantidad, Titulo, idIdioma, Precio FROM Libro WHERE Precio < 500) as X " +
                         "WHERE idIdioma = 2";
-                    lblSql.Text = "Libros que cuestan menos 500 de en Idioma Ruso";
+                    lblSql.Text = "Muestra los libros que cuestan menos de $500 y que estan escritos en ruso";
                     objBD.Listar(dgvConsulta, varSql);
                     break;
                 //Seleccion simple
@@ -123,6 +122,19 @@ namespace pryEstructuraDatos
         private void frmConsultarPorOperaciones_Load(object sender, EventArgs e)
         {
             objBD = new clsBaseDatos();
+            btnListar.Enabled = false;
+        }
+
+        private void lstSentencias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstSentencias.SelectedIndex != -1)
+            {
+                btnListar.Enabled = true;
+            }
+            else
+            {
+                btnListar.Enabled=false;
+            }
         }
     }
 }

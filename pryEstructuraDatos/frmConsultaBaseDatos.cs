@@ -28,6 +28,19 @@ namespace pryEstructuraDatos
         private void frmConsultaBaseDatos_Load(object sender, EventArgs e)
         {
             objBD = new clsBaseDatos();
+            btnConsultar.Enabled = false;
+        }
+
+        private void txtConsultaSql_TextChanged(object sender, EventArgs e)
+        {
+            if (txtConsultaSql.Text != "")
+            {
+                btnConsultar.Enabled = true;
+            }
+            else
+            {
+                btnConsultar.Enabled=false;
+            }
         }
     }
 }

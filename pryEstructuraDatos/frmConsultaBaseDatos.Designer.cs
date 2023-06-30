@@ -38,36 +38,42 @@
             // txtConsultaSql
             // 
             this.txtConsultaSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsultaSql.Location = new System.Drawing.Point(12, 37);
+            this.txtConsultaSql.Location = new System.Drawing.Point(16, 46);
+            this.txtConsultaSql.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConsultaSql.Multiline = true;
             this.txtConsultaSql.Name = "txtConsultaSql";
-            this.txtConsultaSql.Size = new System.Drawing.Size(776, 192);
+            this.txtConsultaSql.Size = new System.Drawing.Size(1033, 235);
             this.txtConsultaSql.TabIndex = 0;
+            this.txtConsultaSql.TextChanged += new System.EventHandler(this.txtConsultaSql_TextChanged);
             // 
             // dgvConsulta
             // 
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsulta.Location = new System.Drawing.Point(12, 269);
+            this.dgvConsulta.Location = new System.Drawing.Point(16, 331);
+            this.dgvConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvConsulta.Name = "dgvConsulta";
-            this.dgvConsulta.Size = new System.Drawing.Size(776, 241);
+            this.dgvConsulta.RowHeadersWidth = 51;
+            this.dgvConsulta.Size = new System.Drawing.Size(1035, 297);
             this.dgvConsulta.TabIndex = 1;
             // 
             // lblConsultaSql
             // 
             this.lblConsultaSql.AutoSize = true;
             this.lblConsultaSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultaSql.Location = new System.Drawing.Point(12, 9);
+            this.lblConsultaSql.Location = new System.Drawing.Point(16, 11);
+            this.lblConsultaSql.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConsultaSql.Name = "lblConsultaSql";
-            this.lblConsultaSql.Size = new System.Drawing.Size(155, 25);
+            this.lblConsultaSql.Size = new System.Drawing.Size(190, 29);
             this.lblConsultaSql.TabIndex = 2;
             this.lblConsultaSql.Text = "Consulta SQL:";
             // 
             // btnConsultar
             // 
             this.btnConsultar.AutoSize = true;
-            this.btnConsultar.Location = new System.Drawing.Point(553, 235);
+            this.btnConsultar.Location = new System.Drawing.Point(737, 289);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(235, 28);
+            this.btnConsultar.Size = new System.Drawing.Size(313, 34);
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -75,14 +81,16 @@
             // 
             // frmConsultaBaseDatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 532);
+            this.ClientSize = new System.Drawing.Size(1068, 655);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblConsultaSql);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.txtConsultaSql);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmConsultaBaseDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Base de Datos";
             this.Load += new System.EventHandler(this.frmConsultaBaseDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
